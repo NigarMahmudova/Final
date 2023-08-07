@@ -1,0 +1,22 @@
+*{
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    background: 0 0;
+    border: 0;
+    outline: 0;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    transition: color .25s ease-out;
+    cursor: pointer;
+}
+
+body{
+    @font-face {
+        font-family: 'Noto Sans', sans-serif;
+        src: url(../fonts/NotoSans-Bold.ttf);
+    }
+}
