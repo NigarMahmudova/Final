@@ -83,6 +83,8 @@
 .slick-slide img {
   display: block;
   max-width: 100%;
+  object-fit: cover;
+  object-position: 0px -540px;
 }
 
 .slick-slide.dragging img {
@@ -410,17 +412,21 @@
 //   border-left: 1px solid #000;
 // }
 
-.fx-e-inner {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  width: 100%;
+.fx-line{
   border: 0;
   border-top: 1px solid #000;
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   border-bottom: 1px solid #000;
 
+}
+.fx-e-inner {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  
+  
   .fx-product-image-inner {
     border: 0;
     opacity: 1;
@@ -879,6 +885,108 @@
 
 .fx-newsletter input::placeholder {
   font-size: 16px;
-    line-height: 19px;
-    color: #000
+  line-height: 19px;
+  color: #000
 }
+
+// Email section end
+
+// Instagram section start
+
+.fx-section-title {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 0px 0px 35px 100px;
+
+  h4 {
+    font-weight: 400;
+    color: #000;
+    font-size: 29px;
+    line-height: 1.34483em;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  .fx-m-text {
+    font-size: 18px;
+    margin: 10px 0 0;
+  }
+}
+
+// Instagram section end
+
+// Carousel section start
+.slick-slide {
+  margin: 0 5px;
+  padding: 0px 0px 60px 0px;
+}
+
+.slick-list {
+  margin: 0px -5px 0px -5px;
+}
+
+button.slick-next,
+button.slick-next:hover {
+  position: absolute;
+  top: 41%;
+  right: 54px;
+  width: 47px;
+  height: 75px;
+  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+  background-size: 95px;
+}
+
+button.slick-prev,
+button.slick-prev:hover {
+  position: absolute;
+  top: 41%;
+  left: 15px;
+  z-index: 1;
+  width: 47px;
+  height: 75px;
+  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
+  background-size: 95px;
+  background-position-x: right;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 70px;
+  color: #EA8496;
+  line-height: inherit;
+  font-weight: bold;
+}
+
+.carousel-slider img {
+  // height: 324px;
+  // object-fit: cover;
+  // object-position: 0 -60px;
+}
+
+// Carousel section end
+
+// Features section start
+.features {
+  display: flex;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+
+  .features-item{
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px 1px 0px 0px;
+    border-color: #000000;
+    transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+    padding: 52px 0px 52px 0px;
+  }
+
+  .fx-m-icon-wrapper {
+    margin-right: 27px;
+}
+}
+
+// Features section end
