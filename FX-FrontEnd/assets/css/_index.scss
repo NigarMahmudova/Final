@@ -461,41 +461,65 @@
       line-height: 1 !important;
       background-color: transparent !important;
 
-      a {
-        color: #fff !important;
+      // a {
+      //   color: #fff !important;
 
 
-      }
+      // }
 
-      a:before {
-        width: 13px;
-        height: 15px;
-        content: '';
-        display: inline-block;
-        background: url(../images/wishlist-add.svg) center center no-repeat;
-        background-size: cover;
-        width: 13px;
-        height: 15px;
-        margin-right: 13px;
-      }
+      // a:before {
+      //   width: 13px;
+      //   height: 15px;
+      //   content: '';
+      //   display: inline-block;
+      //   background: url(../images/wishlist-add.svg) center center no-repeat;
+      //   background-size: cover;
+      //   width: 13px;
+      //   height: 15px;
+      //   margin-right: 13px;
+      // }
 
-      a:after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: inline-block;
-        background: url(../images/wishlist-added.svg) center center no-repeat;
-        background-size: cover;
-        width: 13px;
-        height: 15px;
-        margin-right: 13px;
-        opacity: 0;
-        transition: opacity .25s ease-out;
-      }
+      // a:after {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      //   display: inline-block;
+      //   background: url(../images/wishlist-added.svg) center center no-repeat;
+      //   background-size: cover;
+      //   width: 13px;
+      //   height: 15px;
+      //   margin-right: 13px;
+      //   opacity: 0;
+      //   transition: opacity .25s ease-out;
+      // }
+
+
+      
     }
+
+    .fx-button {
+      font-size: 0!important;
+      margin: 0!important;
+      padding: 0!important;
+      line-height: 1!important;
+      border: 0!important;
+      background-color: transparent!important
+  }
+
+    .fx-button:before {
+      content: '';
+      display: inline-block;
+      background-size: cover;
+      width: 16px;
+      height: 9px;
+      margin-right: 13px;
+      color: transparent;
+      background-image: url("../images/quick-view.png");
+      transition: color .25s ease-out
+  }
   }
 }
 
@@ -958,11 +982,11 @@ button.slick-prev:hover {
   font-weight: bold;
 }
 
-.carousel-slider img {
-  // height: 324px;
-  // object-fit: cover;
-  // object-position: 0 -60px;
-}
+// .carousel-slider img {
+//   // height: 324px;
+//   // object-fit: cover;
+//   // object-position: 0 -60px;
+// }
 
 // Carousel section end
 
