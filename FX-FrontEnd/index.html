@@ -78,7 +78,7 @@
                     class="widget widget_fx_core_woo_dropdown_cart fx-header-widget-area-one">
                     <div class="fx-widget-dropdown-cart-outer">
                         <div class="fx-widget-dropdown-cart-inner">
-                            <a class="fx-m-opener" href="cart/index.html">
+                            <a class="fx-m-opener" href="basket.html">
                                 <span class="fx-m-opener-text">Cart</span>
                                 <span class="fx-m-opener-icon">
                                     <svg class="fx-svg--cart" xmlns="http://www.w3.org/2000/svg" width="12.578"
@@ -93,9 +93,9 @@
                                         <path d="M.5 15V3.625h11.578V15Z" fill="none" stroke="currentColor" />
                                     </svg>
                                 </span>
-                                <span class="fx-m-opener-count">0</span>
+                                <span id="count" class="fx-m-opener-count">0</span>
                             </a>
-                            <div class="fx-widget-dropdown-cart-content">
+                            <div id="cart-content" class="fx-widget-dropdown-cart-content">
                                 <p class="fx-m-posts-not-found">No products in the cart.</p>
                             </div>
                         </div>
@@ -327,7 +327,7 @@
 
     <!-- Main section start -->
     <div id="fx-page-outer">
-        <div id="fx-page-inner" class="fx-content-full-width">
+        <div id="fx-home-page-inner" class="fx-content-full-width">
             <main id="fx-page-content" class="qodef-grid qodef-layout--template " role="main">
                 <div class="fx-grid-inner">
                     <div class="qodef-grid-item qodef-page-content-section qodef-col--12 qodef-col--content">
@@ -452,22 +452,16 @@
                                             <div class="fx-grid">
                                                 <div class="row">
                                                     <div class="col-lg-3 col-md-6 col-12">
-                                                        <div class="fx-e-inner fx-line">
+                                                        <div id="1" class="fx-e-inner fx-line">
                                                             <div class="fx-product-image">
                                                                 <span class="fx-product-mark fx-new">New</span>
                                                                 <img width="410" height="556"
-                                                                    src="wp-content/uploads/2022/09/Main-product-list-1.jpg"
-                                                                    class="attachment-full size-full" alt="a"
-                                                                    decoding="async" loading="lazy"
-                                                                    srcset="https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/Main-product-list-1.jpg 410w, https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/Main-product-list-1-221x300.jpg 221w"
-                                                                    sizes="(max-width: 410px) 100vw, 410px" />
+                                                                    src="https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/Main-product-list-1.jpg"
+                                                                    class="attachment-full size-full" alt="a"/>
                                                                 <div class="fx-e-image-hover">
                                                                     <img width="410" height="556"
-                                                                        src="wp-content/uploads/2022/09/product-list-haver-img-6.jpg"
-                                                                        class="attachment-full size-full" alt=""
-                                                                        decoding="async" loading="lazy"
-                                                                        srcset="https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/product-list-haver-img-6.jpg 410w, https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/product-list-haver-img-6-221x300.jpg 221w"
-                                                                        sizes="(max-width: 410px) 100vw, 410px" />
+                                                                        src="https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/product-list-haver-img-6.jpg"
+                                                                        class="attachment-full size-full" alt=""/>
                                                                 </div>
                                                                 <div class="fx-product-image-inner">
                                                                     <div class="fx-add-to-wishlist">
@@ -499,12 +493,12 @@
                                                                         Black Jacket </a>
                                                                 </h6>
                                                                 <div class="fx-product-price price">
-                                                                    <span class="woocommerce-Price-amount amount"><span
-                                                                            class="woocommerce-Price-currencySymbol">&#036;</span>350.00</span>
+                                                                    <span class="woocommerce-Price-amount amount">
+                                                                        <span class="woocommerce-Price-currencySymbol">&#036;</span>
+                                                                        <span>350.00</span>
+                                                                    </span>
                                                                 </div>
-                                                                <a href="indexbfaf.html?add-to-cart=237"
-                                                                    data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                <a href="#" class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="237" data-product_sku="008"
                                                                     aria-label="Add &ldquo;Black Jacket&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -566,7 +560,7 @@
                                                                 </div>
                                                                 <a href="indexcb0b.html?add-to-cart=246"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="246" data-product_sku="009"
                                                                     aria-label="Add &ldquo;Leather Jacket&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -634,7 +628,7 @@
                                                                 </div>
                                                                 <a href="indexd4da.html?add-to-cart=256"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="256" data-product_sku="010"
                                                                     aria-label="Add &ldquo;Black Outfit&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -696,7 +690,7 @@
                                                                 </div>
                                                                 <a href="indexb6ea.html?add-to-cart=279"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="279" data-product_sku="011"
                                                                     aria-label="Add &ldquo;T-Shirt&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -1366,7 +1360,7 @@
                                                                 </div>
                                                                 <a href="indexbfaf.html?add-to-cart=237"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="237" data-product_sku="008"
                                                                     aria-label="Add &ldquo;Black Jacket&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -1428,7 +1422,7 @@
                                                                 </div>
                                                                 <a href="indexcb0b.html?add-to-cart=246"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="246" data-product_sku="009"
                                                                     aria-label="Add &ldquo;Leather Jacket&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -1496,7 +1490,7 @@
                                                                 </div>
                                                                 <a href="indexd4da.html?add-to-cart=256"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="256" data-product_sku="010"
                                                                     aria-label="Add &ldquo;Black Outfit&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -1558,7 +1552,7 @@
                                                                 </div>
                                                                 <a href="indexb6ea.html?add-to-cart=279"
                                                                     data-quantity="1"
-                                                                    class="button wp-element-button product_type_simple add_to_cart_button ajax_add_to_cart"
+                                                                    class="button wp-element-button product_type_simple add_to_cart_button js_add_to_cart"
                                                                     data-product_id="279" data-product_sku="011"
                                                                     aria-label="Add &ldquo;T-Shirt&rdquo; to your cart"
                                                                     rel="nofollow">Add to cart</a>
@@ -2028,6 +2022,10 @@
         });
 
     </script>
+
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/basket.js"></script>
+
 </body>
 
 </html>

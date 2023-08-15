@@ -1417,7 +1417,7 @@ button.slick-prev:hover {
   transition: all 0.4s ease-out;
   border: 1px solid transparent;
 }
-.shop-products .fx-product-image .fx-product-image-inner .button {
+.shop-products .fx-product-image .fx-product-image-inner .add_to_cart_button {
   background-color: #fff;
   padding: 11px 33px;
   font-family: "Noto Sans", sans-serif;
@@ -1462,7 +1462,7 @@ button.slick-prev:hover {
 .shop-products .fx-product-image .fx-product-image-inner .fx-add-to-wishlist a {
   color: #fff !important;
 }
-.shop-products .fx-product-image .fx-product-image-inner .fx-add-to-wishlist a :before {
+.shop-products .fx-product-image .fx-product-image-inner .fx-add-to-wishlist a::before {
   content: "";
   display: inline-block;
   background: url(../images/wishlist-add.svg) center center no-repeat;
@@ -1471,7 +1471,7 @@ button.slick-prev:hover {
   height: 15px;
   margin-right: 13px;
 }
-.shop-products .fx-product-image .fx-product-image-inner .fx-add-to-wishlist a :after {
+.shop-products .fx-product-image .fx-product-image-inner .fx-add-to-wishlist a::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1488,11 +1488,14 @@ button.slick-prev:hover {
   transition: opacity 0.25s ease-out;
 }
 .shop-products .fx-product-image .fx-product-image-inner .fx-button {
-  opacity: 0;
+  position: absolute;
+  top: 21px;
+  right: 14px;
+  opacity: 1;
   transform: translateY(10px);
   transition: 0.5s cubic-bezier(0.12, 0.48, 0.05, 0.96);
 }
-.shop-products .fx-product-image .fx-product-image-inner .fx-button :before {
+.shop-products .fx-product-image .fx-product-image-inner .fx-button::before {
   content: "";
   display: inline-block;
   background-size: cover;
@@ -2224,12 +2227,9 @@ button.slick-prev:hover {
   transition: color 0.25s ease-out, background-color 0.25s ease-out;
   font-weight: 500;
 }
-.fx-tabs-wrapper .fx-detail-tabs .fx-product-tabs-line {
+.fx-tabs-wrapper .active {
   display: block;
-  height: 3px;
-  background-color: currentColor;
-  position: absolute;
-  bottom: -2px;
+  border-bottom: 2px solid #000;
   transition: width 0.4s, left 0.6s cubic-bezier(0.25, 0.1, 0.11, 0.99);
   z-index: 99;
 }
@@ -2410,4 +2410,398 @@ button.slick-prev:hover {
   color: #000;
   background-color: #fff;
   border-color: #000;
+}
+
+#fx-page-inner {
+  position: relative;
+  padding: 94px 0 140px;
+}
+#fx-page-inner .empty-basket .cart-empty {
+  font-weight: 400;
+  color: #000;
+  font-size: 35px;
+  line-height: 1.2em;
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  display: flex;
+}
+#fx-page-inner .empty-basket .return-to-shop {
+  margin: 20px 0 0;
+  text-align: center;
+}
+#fx-page-inner .empty-basket .return-to-shop a {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  padding: 9px 44px;
+  cursor: pointer;
+  z-index: 3;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid transparent;
+}
+#fx-page-inner .empty-basket .return-to-shop a:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+}
+#fx-page-inner #card-list table {
+  width: 100%;
+  vertical-align: middle;
+  border: medium none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+#fx-page-inner #card-list table tr {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#fx-page-inner #card-list table tr th {
+  font-weight: 400;
+  color: #000;
+  line-height: 1.375em;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+  padding: 13px 0 13px 13px;
+  vertical-align: middle;
+}
+#fx-page-inner #card-list table tr .screen-reader-text {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  line-height: 1;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  border: 0;
+  word-wrap: normal !important;
+  overflow: hidden;
+}
+#fx-page-inner #card-list table tr .product-remove {
+  width: 30px;
+}
+#fx-page-inner #card-list table tr .product-thumbnail {
+  width: 68px;
+  padding-left: 0;
+}
+#fx-page-inner #card-list table tr .product-name {
+  text-align: left;
+  padding-left: 24px;
+}
+#fx-page-inner #card-list table tr td {
+  padding: 13px 0 13px 13px;
+  vertical-align: middle;
+  text-align: left;
+}
+#fx-page-inner #card-list table tr td.product-remove {
+  width: 30px;
+}
+#fx-page-inner #card-list table tr td.product-remove a {
+  font-size: 20px;
+}
+#fx-page-inner #card-list table tr td.product-thumbnail {
+  width: 68px;
+  padding-left: 0;
+}
+#fx-page-inner #card-list table tr td.product-thumbnail a {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+#fx-page-inner #card-list table tr td.product-thumbnail a img {
+  height: 77px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  will-change: transform;
+  border: 1px solid #000;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+#fx-page-inner #card-list table tr td.product-name {
+  text-align: left;
+  padding-left: 24px;
+}
+#fx-page-inner #card-list table tr td.product-name a {
+  color: #000;
+  line-height: 1.375em;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+#fx-page-inner #card-list table tr td.product-price {
+  font-size: 16px;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-minus {
+  bottom: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 23px;
+  cursor: pointer;
+  transition: color 0.25s ease-out;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-minus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 1px;
+  background-color: currentColor;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-minus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 1px;
+  background-color: currentColor;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-input {
+  border: 0;
+  position: relative;
+  height: 18px;
+  width: 48px;
+  padding: 0;
+  margin: 0 18px 0 18px;
+  font-family: inherit;
+  line-height: 18px;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #000;
+  background-color: transparent;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-plus {
+  bottom: 1px;
+  position: absolute;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 23px;
+  cursor: pointer;
+  transition: color 0.25s ease-out;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-plus::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 1px;
+  background-color: currentColor;
+}
+#fx-page-inner #card-list table tr .fx-quantity-buttons .fx-quantity-plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 4px);
+  width: 8px;
+  height: 1px;
+  background-color: currentColor;
+  transform: rotate(90deg);
+}
+#fx-page-inner #card-list table tr td.actions {
+  padding: 33px 0 0;
+  text-align: initial;
+}
+#fx-page-inner #card-list table tr td.actions > .button {
+  float: right;
+}
+#fx-page-inner #card-list table tr td.actions button {
+  padding: 11px 33px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  cursor: pointer;
+  z-index: 3;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+#fx-page-inner #card-list table tr td.actions button:hover {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+#fx-page-inner #card-list table tr td.actions .coupon {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 70%;
+  float: left;
+}
+#fx-page-inner #card-list table tr td.actions .coupon input {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  width: auto;
+  margin-right: 22px;
+  padding: 11px 9px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  letter-spacing: 0;
+  background-color: transparent;
+  border-color: #000;
+  color: #000;
+}
+#fx-page-inner #card-list table tbody > tr:last-child {
+  border-bottom: 0;
+}
+#fx-page-inner #card-list .cart_totals {
+  margin-top: 125px;
+}
+#fx-page-inner #card-list .cart_totals > h2 {
+  font-weight: 400;
+  color: #000;
+  font-size: 35px;
+  line-height: 1.2em;
+  font-family: "Noto Sans", sans-serif;
+  margin: 0 0 42px;
+  display: none;
+}
+#fx-page-inner #card-list .cart_totals table {
+  width: 100%;
+  vertical-align: middle;
+  border: medium none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+#fx-page-inner #card-list .cart_totals table tr {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#fx-page-inner #card-list .cart_totals table th {
+  width: 29%;
+  padding: 16px 0 16px 13px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.375em;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 19px;
+}
+#fx-page-inner #card-list .cart_totals table td {
+  padding: 16px 0 16px 13px;
+  vertical-align: middle;
+  text-align: left;
+}
+#fx-page-inner #card-list .cart_totals table td ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#fx-page-inner #card-list .cart_totals table .order-total {
+  border: 1px solid #000;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#fx-page-inner #card-list .cart_totals .fx-proceed-to-checkout {
+  margin-top: 33px;
+  padding: 11px 33px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  padding: 11px 49px;
+  cursor: pointer;
+  z-index: 3;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+#fx-page-inner #card-list .cart_totals .fx-proceed-to-checkout:hover {
+  background-color: #000;
+  border-color: #000;
+}
+#fx-page-inner #card-list .cart_totals .fx-proceed-to-checkout:hover a {
+  color: #fff !important;
 }/*# sourceMappingURL=style.css.map */

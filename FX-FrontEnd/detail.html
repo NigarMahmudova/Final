@@ -94,7 +94,7 @@
                                         <path d="M.5 15V3.625h11.578V15Z" fill="none" stroke="currentColor" />
                                     </svg>
                                 </span>
-                                <span class="fx-m-opener-count">0</span>
+                                <span id="count" class="fx-m-opener-count">0</span>
                             </a>
                             <div class="fx-widget-dropdown-cart-content">
                                 <p class="fx-m-posts-not-found">No products in the cart.</p>
@@ -422,7 +422,7 @@
                                                 <span class="fx-quantity-plus"></span>
                                             </div>
                                             <button type="submit" name="add-to-cart" value="757"
-                                                class="detail_add_to_cart_button wp-element-button">Add to
+                                                class="detail_add_to_cart_button wp-element-button js_add_to_cart">Add to
                                                 cart</button>
                                         </form>
                                         <div class="fx-add-to-wishlist add-to-wishlist-757">
@@ -476,25 +476,23 @@
                             <section class="info-tabmenu">
                                 <div class="fx--tabs fx-tabs-wrapper">
                                     <ul class="tabs fx-detail-tabs" role="tablist">
-                                        <li class="description_tab" id="tab-title-description" role="tab"
-                                            aria-controls="tab-description">
+                                        <li class="description_tab active" data-id="tab-title-description" role="tab">
                                             <a href="#tab-description">
                                                 Description </a>
                                         </li>
-                                        <li class="additional_information_tab" id="tab-title-additional_information"
-                                            role="tab" aria-controls="tab-additional_information">
+                                        <li class="additional_information_tab" data-id="tab-title-additional_information"
+                                            role="tab">
                                             <a href="#tab-additional_information">
                                                 Additional information </a>
                                         </li>
-                                        <li class="reviews_tab" id="tab-title-reviews" role="tab"
-                                            aria-controls="tab-reviews">
+                                        <li class="reviews_tab" data-id="tab-title-reviews" role="tab">
                                             <a href="#tab-reviews">
                                                 Reviews (0) </a>
                                         </li>
-                                        <li class="fx-product-tabs-line" style="width: 124.312px;left: 0px;"></li>
+                                        <!-- <span class="fx-product-tabs-line" style="width: 124.312px;left: 0px;"></span> -->
                                     </ul>
-                                    <div class="fx-Tabs-panel fx-Tabs-panel--description panel entry-content wc-tab"
-                                        id="tab-description" role="tabpanel" aria-labelledby="tab-title-description">
+                                    <div class="fx-Tabs-panel"
+                                        role="tabpanel" id="tab-title-description">
                                         <h2>Description</h2>
                                         <section class="description">
                                             <p>
@@ -508,9 +506,8 @@
                                             </p>
                                         </section>
                                     </div>
-                                    <div class="fx-Tabs-panel fx-Tabs-panel--additional_information panel entry-content wc-tab"
-                                        id="tab-additional_information" role="tabpanel"
-                                        aria-labelledby="tab-title-additional_information">
+                                    <div class="fx-Tabs-panel d-none"
+                                        role="tabpanel" id="tab-title-additional_information">
                                         <h2>Additional information</h2>
                                         <table class="fx-product-attributes shop_attributes">
                                             <tr>
@@ -524,8 +521,8 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div class="fx-Tabs-panel fx-Tabs-panel--reviews panel entry-content wc-tab"
-                                        id="tab-reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                                    <div class="fx-Tabs-panel d-none"
+                                        role="tabpanel" id="tab-title-reviews">
                                         <div id="reviews" class="fx-Reviews">
                                             <div id="comments">
                                                 <h2 class="fx-Reviews-title">
@@ -959,6 +956,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="./assets/js/app.js"></script>
 
 
 </body>
