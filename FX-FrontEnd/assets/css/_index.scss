@@ -525,7 +525,12 @@
         height: 9px;
         margin-right: 13px;
         color: transparent;
-        background-image: url(../images/quick-view.svg);
+        background-image: radial-gradient(
+            at 50% 50%,
+            currentColor 2px,
+            #0000 2px
+          ),
+          url(../images/quick-view.svg);
         transition: color 0.25s ease-out;
       }
     }
@@ -704,7 +709,6 @@
     }
   }
 
-  
   .button {
     font-family: "Noto Sans", sans-serif;
     font-size: 12px;
@@ -729,7 +733,7 @@
     background-color: transparent;
     border: 1px solid #000;
 
-    &:hover{
+    &:hover {
       color: #fff;
       background-color: #000;
       border-color: #000;

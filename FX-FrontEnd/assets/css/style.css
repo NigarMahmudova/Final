@@ -880,7 +880,7 @@ button {
   height: 9px;
   margin-right: 13px;
   color: transparent;
-  background-image: url(../images/quick-view.svg);
+  background-image: radial-gradient(at 50% 50%, currentColor 2px, rgba(0, 0, 0, 0) 2px), url(../images/quick-view.svg);
   transition: color 0.25s ease-out;
 }
 
