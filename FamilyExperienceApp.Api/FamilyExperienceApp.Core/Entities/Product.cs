@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FamilyExperienceApp.Core.Entities
 {
-    public class Product:BaseEntity
+    public class Product:BaseTrackedEntity
     {
         public int CategoryId { get; set; }
         public string Name { get; set; }
@@ -22,6 +22,6 @@ namespace FamilyExperienceApp.Core.Entities
         public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
         public List<ProductColorSize> ProductColorSizes { get; set; }
-
+        public List<ProductLanguage> ProductLanguages { get; set; }
     }
 }

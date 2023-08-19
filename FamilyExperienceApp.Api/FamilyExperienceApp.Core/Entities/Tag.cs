@@ -11,5 +11,6 @@ namespace FamilyExperienceApp.Core.Entities
         public string Name { get; set; }
 
         public List<ProductTag> ProductTags { get; set; }
+        public List<TagLanguage> TagLanguages { get; set; }
     }
 }

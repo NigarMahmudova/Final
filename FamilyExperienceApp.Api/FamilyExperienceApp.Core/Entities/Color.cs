@@ -10,6 +10,9 @@ namespace FamilyExperienceApp.Core.Entities
     {
         public string Name { get; set; }
 
+        public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public List<ProductColorSize> ProductColorSizes { get; set; }
+        public List<ColorLanguage> ColorLanguages { get; set; }
+
     }
 }

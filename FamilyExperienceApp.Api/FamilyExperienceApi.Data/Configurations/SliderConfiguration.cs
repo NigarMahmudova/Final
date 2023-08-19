@@ -17,6 +17,7 @@ namespace FamilyExperienceApi.Data.Configurations
             builder.Property(x => x.Desc).HasMaxLength(150);
             builder.Property(x => x.BtnText).HasMaxLength(50);
             builder.Property(x => x.BtnUrl).HasMaxLength(150);
+            builder.Property(x => x.ImageName).HasMaxLength(100);
         }
     }
 }

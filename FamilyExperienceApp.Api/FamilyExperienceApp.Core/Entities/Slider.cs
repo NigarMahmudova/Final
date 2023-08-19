@@ -14,5 +14,7 @@ namespace FamilyExperienceApp.Core.Entities
         public string BtnText { get; set; }
         public string BtnUrl { get; set; }
         public string ImageName { get; set; }
+
+        public List<SliderLanguage> SliderLanguages { get; set; }
     }
 }
