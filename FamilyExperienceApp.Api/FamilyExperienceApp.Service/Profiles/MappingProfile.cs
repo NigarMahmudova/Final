@@ -3,6 +3,7 @@ using FamilyExperienceApp.Core.Entities;
 using FamilyExperienceApp.Service.Dtos.Category;
 using FamilyExperienceApp.Service.Dtos.Color;
 using FamilyExperienceApp.Service.Dtos.Product;
+using FamilyExperienceApp.Service.Dtos.Tag;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,10 @@ namespace FamilyExperienceApp.Service.Profiles
             CreateMap<ColorPostDto, Color>();
             CreateMap<Color, ColorPostDto>();
             CreateMap<Color, ColorGetAllDto>();
+
+            CreateMap<TagPostDto, Tag>();
+            CreateMap<Tag, TagPostDto>();
+            CreateMap<Tag, TagGetAllDto>();
         }
     }
 }
