@@ -70,8 +70,10 @@ builder.Services.AddDbContext<FamExpDBContext>(opt =>
 
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IColorRepository, ColorRepository>();
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IColorService, ColorService>();
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<CategoryPostDtoValidator>();

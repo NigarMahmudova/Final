@@ -48,7 +48,7 @@ namespace FamilyExperienceApp.Service.Implementations
 
         public CategoryGetDto GetById(int id)
         {
-            var entity = _categoryRepository.Get(x => x.Id == id, "Students");
+            var entity = _categoryRepository.Get(x => x.Id == id, "Products");
 
             if (entity == null)
             {
