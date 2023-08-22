@@ -1,5 +1,6 @@
 ﻿using FamilyExperienceApi.Data.Configurations;
 using FamilyExperienceApp.Core.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,11 +10,12 @@ using System.Threading.Tasks;
 
 namespace FamilyExperienceApi.Data
 {
-    public class FamExpDBContext:DbContext
+    public class FamExpDBContext:IdentityDbContext
     {
         public FamExpDBContext(DbContextOptions<FamExpDBContext> options):base(options){ }
 
         public DbSet<Language> Languages { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Size> Sizes { get; set; }
