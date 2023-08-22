@@ -15,6 +15,7 @@ namespace FamilyExperienceApp.Service.Interfaces
         void Put(int id, TagPutDto putDto);
         TagGetDto GetById(int id);
         List<TagGetAllDto> GetAll();
+        PaginatedListDto<TagGetPaginatedListItemDto> GetAllPaginated(int page);
         void Delete(int id);
     }
 }

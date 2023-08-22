@@ -21,14 +21,19 @@ namespace FamilyExperienceApp.Service.Profiles
             CreateMap<Category, CategoryPostDto>();
             CreateMap<Category, CategoryInProductGetDto>();
             CreateMap<Category, CategoryGetAllDto>();
+            CreateMap<Category, CategoryGetPaginatedListItemDto>();
 
             CreateMap<ColorPostDto, Color>();
             CreateMap<Color, ColorPostDto>();
             CreateMap<Color, ColorGetAllDto>();
+            CreateMap<Color, ColorGetPaginatedListItemDto>();
+
 
             CreateMap<TagPostDto, Tag>();
             CreateMap<Tag, TagPostDto>();
             CreateMap<Tag, TagGetAllDto>();
+            CreateMap<Tag, TagGetPaginatedListItemDto>();
+
         }
     }
 }

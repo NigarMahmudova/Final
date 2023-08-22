@@ -48,6 +48,14 @@ namespace FamilyExperienceApp.Service.Implementations
             return _mapper.Map<List<ColorGetAllDto>>(dtos);
         }
 
+        public PaginatedListDto<ColorGetPaginatedListItemDto> GetAllPaginated(int page)
+        {
+            var query = _colorRepository.GetQueryable(x => true, "Products");
+            var entities = query.Skip((page - 1) * 4).Take(4).ToList();
+            var items = _mapper.Map<List<ColorGetPaginatedListItemDto>>(entities);
+            return new PaginatedListDto<ColorGetPaginatedListItemDto>(items, page, 4, query.Count());
+        }
+
         public ColorGetDto GetById(int id)
         {
             var entity = _colorRepository.Get(x => x.Id == id);

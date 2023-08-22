@@ -15,6 +15,7 @@ namespace FamilyExperienceApp.Service.Interfaces
         void Put(int id, ColorPutDto putDto);
         ColorGetDto GetById(int id);
         List<ColorGetAllDto> GetAll();
+        PaginatedListDto<ColorGetPaginatedListItemDto> GetAllPaginated(int page);
         void Delete(int id);
     }
 }

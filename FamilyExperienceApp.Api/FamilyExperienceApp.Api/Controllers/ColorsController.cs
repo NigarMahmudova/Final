@@ -1,5 +1,6 @@
 ﻿using FamilyExperienceApp.Service.Dtos.Category;
 using FamilyExperienceApp.Service.Dtos.Color;
+using FamilyExperienceApp.Service.Dtos.Common;
 using FamilyExperienceApp.Service.Implementations;
 using FamilyExperienceApp.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -22,6 +23,12 @@ namespace FamilyExperienceApp.Api.Controllers
         public ActionResult<List<ColorGetAllDto>> GetAll()
         {
             return Ok(_colorService.GetAll());
+        }
+
+        [HttpGet("")]
+        public ActionResult<PaginatedListDto<ColorGetPaginatedListItemDto>> GetAll(int page = 1)
+        {
+            return Ok(_colorService.GetAllPaginated(page));
         }
 
         [HttpGet("{id}")]

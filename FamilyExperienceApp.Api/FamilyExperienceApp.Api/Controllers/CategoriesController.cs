@@ -1,4 +1,5 @@
 ﻿using FamilyExperienceApp.Service.Dtos.Category;
+using FamilyExperienceApp.Service.Dtos.Common;
 using FamilyExperienceApp.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +21,12 @@ namespace FamilyExperienceApp.Api.Controllers
         public ActionResult<List<CategoryGetAllDto>> GetAll()
         {
             return Ok(_categoryService.GetAll());
+        }
+
+        [HttpGet("")]
+        public ActionResult<PaginatedListDto<CategoryGetPaginatedListItemDto>> GetAll(int page = 1)
+        {
+            return Ok(_categoryService.GetAllPaginated(page));
         }
 
         [HttpGet("{id}")]

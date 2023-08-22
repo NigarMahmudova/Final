@@ -72,10 +72,12 @@ builder.Services.AddDbContext<FamExpDBContext>(opt =>
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IColorRepository, ColorRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
+builder.Services.AddScoped<ISliderRepository, SliderRepository>();
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IColorService, ColorService>();
 builder.Services.AddScoped<ITagService, TagService>();
+builder.Services.AddScoped<ISliderService, SliderService>();
 
 builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddValidatorsFromAssemblyContaining<CategoryPostDtoValidator>();

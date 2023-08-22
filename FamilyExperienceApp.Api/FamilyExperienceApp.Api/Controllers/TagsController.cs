@@ -1,5 +1,7 @@
 ﻿using FamilyExperienceApp.Service.Dtos.Category;
+using FamilyExperienceApp.Service.Dtos.Common;
 using FamilyExperienceApp.Service.Dtos.Tag;
+using FamilyExperienceApp.Service.Implementations;
 using FamilyExperienceApp.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +24,12 @@ namespace FamilyExperienceApp.Api.Controllers
         public ActionResult<List<TagGetAllDto>> GetAll()
         {
             return Ok(_tagService.GetAll());
+        }
+
+        [HttpGet("")]
+        public ActionResult<PaginatedListDto<CategoryGetPaginatedListItemDto>> GetAll(int page = 1)
+        {
+            return Ok(_tagService.GetAllPaginated(page));
         }
 
         [HttpGet("{id}")]
