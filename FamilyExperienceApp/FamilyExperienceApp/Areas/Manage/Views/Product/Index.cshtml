@@ -1,4 +1,4 @@
-﻿@model PaginatedList<Category>
+﻿@model PaginatedList<Product>
 @{
     ViewData["Title"] = "Index";
     int dataOrder = (Model.PageIndex - 1) * 2;
@@ -57,7 +57,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Categories</h4>
+                                <h4 class="card-title">Products</h4>
                                 <a asp-action="create" class="btn btn-primary">Create</a>
                             </div>
                             <div class="table-responsive">
@@ -66,7 +66,11 @@
                                         <tr>
                                             <th scope="col">#</th>
                                             <th scope="col">Name</th>
-                                            <th scope="col">ProductCount</th>
+                                            <th scope="col">Category</th>
+                                            <th scope="col">SalePrice</th>
+                                            <th scope="col">CostPrice</th>
+                                            <th scope="col">DiscountPercent</th>
+                                            <th scope="col">İmage</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -77,10 +81,16 @@
                                 <tr>
                                     <th scope="row">@dataOrder</th>
                                     <td>@item.Name</td>
-                                    <td>@item.Products.Count</td>
+                                    <td>@item.Category.Name</td>
+                                    <td>@item.SalePrice</td>
+                                    <td>@item.CostPrice</td>
+                                    <td>@item.DiscountPercent</td>
+                                    <td>
+                                        <img width="150" src="~/manage/uploads/products/@item.ProductImages.FirstOrDefault()?.ImageName">
+                                    </td>
                                     <td>
                                         <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
-                                        <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger delete-btn @(item.Products.Count>0?"disabled":"")">Delete</a>
+                                        <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger delete-btn">Delete</a>
                                     </td>
                                 </tr>
                             }
@@ -90,27 +100,27 @@
                                 </table>
 
                     <nav aria-label="...">
-                <ul class="pagination">
-                    <li class="page-item @(Model.HasPrev?"":"disabled")">
-                        <a class="page-link" asp-action="index" asp-controller="category" asp-route-search="@ViewBag.Search" asp-route-page="1">First</a>
-                    </li>
-                    <li class="page-item @(Model.HasPrev?"":"disabled")">
-                        <a class="page-link" asp-action="index" asp-controller="category" asp-route-search="@ViewBag.Search" asp-route-page="@(Model.PageIndex-1)">Previous</a>
-                    </li>       
+                        <ul class="pagination">
+                            <li class="page-item @(Model.HasPrev?"":"disabled")">
+                                <a class="page-link" asp-action="index" asp-controller="product" asp-route-search="@ViewBag.Search" asp-route-page="1">First</a>
+                            </li>
+                            <li class="page-item @(Model.HasPrev?"":"disabled")">
+                                <a class="page-link" asp-action="index" asp-controller="product" asp-route-search="@ViewBag.Search" asp-route-page="@(Model.PageIndex-1)">Previous</a>
+                            </li>
 
                             @for (int i = 1; i <= Model.TotalPages; i++)
                             {
-                            <li class="page-item @(Model.PageIndex==i?"active":"")"><a class="page-link" asp-route-search="@ViewBag.Search" asp-route-page="@i">@i</a></li>
+                                <li class="page-item @(Model.PageIndex==i?"active":"")"><a class="page-link" asp-route-search="@ViewBag.Search" asp-route-page="@i">@i</a></li>
                             }
 
-                    <li class="page-item  @(Model.HasNext?"":"disabled")">
-                        <a class="page-link" asp-action="index" asp-controller="category" asp-route-search="@ViewBag.Search" asp-route-page="@(Model.PageIndex+1)">Next</a>
-                    </li>
-                    <li class="page-item @(Model.HasNext?"":"disabled")">
-                        <a class="page-link" asp-action="index" asp-controller="category" asp-route-search="@ViewBag.Search" asp-route-page="@Model.TotalPages">Last</a>
-                    </li> 
-                </ul>
-            </nav>
+                            <li class="page-item  @(Model.HasNext?"":"disabled")">
+                                <a class="page-link" asp-action="index" asp-controller="product" asp-route-search="@ViewBag.Search" asp-route-page="@(Model.PageIndex+1)">Next</a>
+                            </li>
+                            <li class="page-item @(Model.HasNext?"":"disabled")">
+                                <a class="page-link" asp-action="index" asp-controller="product" asp-route-search="@ViewBag.Search" asp-route-page="@Model.TotalPages">Last</a>
+                            </li>
+                        </ul>
+                    </nav>
                             </div>
                         </div>
                     </div>

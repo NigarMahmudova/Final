@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uu8RRyFYrgoim/LtqzCWjZ8+w8AdyE3MSJrAcLHk/O8CXN1uhovnlljrAxZtit/NW+v9Ybpj4TOPeMZfeb7KTg==",
+  "dgSpecHash": "eTx0FHwy9EA3Kj9IYXDtzrQinGW2ZENipAAJA/ogMgxtVPTQLe8a15wWYJGoS/A8XWeDzJX+EkTxDsc83PflQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User Widnows 10 Home\\Documents\\C#\\.NET tasks\\FamExp\\FamilyExperienceApp\\FamilyExperienceApp\\FamilyExperienceApp.csproj",
+  "projectFilePath": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\FamilyExperienceApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User Widnows 10 Home\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\User Widnows 10 Home\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

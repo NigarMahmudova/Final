@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using FamilyExperienceApp.Attributes.CustomValidationAttributes;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -27,6 +28,24 @@ namespace FamilyExperienceApp.Entities
 
         public Category Category { get; set; }
         public Color Color { get; set; }
+
+        [NotMapped]
+        [MaxFileLength(2097152)]
+        [AllowedContentTypes("image/png", "image/jpeg")]
+        public IFormFile PosterFile { get; set; }
+        [NotMapped]
+        [MaxFileLength(2097152)]
+        [AllowedContentTypes("image/png", "image/jpeg")]
+        public IFormFile HoverPosterFile { get; set; }
+        [NotMapped]
+        [MaxFileLength(2097152)]
+        [AllowedContentTypes("image/png", "image/jpeg")]
+        public List<IFormFile> ImageFiles { get; set; } = new List<IFormFile>();
+        [NotMapped]
+        public List<int> SizeIds { get; set; } = new List<int>();
+        [NotMapped]
+        public List<int> ProductImageIds { get; set; } = new List<int>();
+
         public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public List<ProductSize> ProductSizes { get; set; } = new List<ProductSize>();
     }

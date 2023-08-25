@@ -65,7 +65,7 @@
                                     <td>@item.Products.Count</td>
                                     <td>
                                         <a asp-action="edit" asp-route-id="@item.Id" class="btn btn-warning">Edit</a>
-                                        <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
+                                        <a asp-action="delete" asp-route-id="@item.Id" class="btn btn-danger delete-btn @(item.Products.Count>0?"disabled":"")">Delete</a>
                                     </td>
                                 </tr>
                             }
@@ -109,5 +109,8 @@
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
-            
+@section Scripts{
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+                    }
         
