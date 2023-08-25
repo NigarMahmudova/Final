@@ -21,7 +21,7 @@ namespace FamilyExperienceApp.Core.Entities
         public Category Category { get; set; }
         public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public List<ProductTag> ProductTags { get; set; } = new List<ProductTag>();
-        public List<ProductColorSize> ProductColorSizes { get; set; }
+        public List<ProductColorSize> ProductColorSizes { get; set; } = new List<ProductColorSize>();
         public List<ProductLanguage> ProductLanguages { get; set; }
     }
 }

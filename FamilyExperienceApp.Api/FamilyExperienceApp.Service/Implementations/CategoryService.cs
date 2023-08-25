@@ -48,7 +48,7 @@ namespace FamilyExperienceApp.Service.Implementations
 
         public PaginatedListDto<CategoryGetPaginatedListItemDto> GetAllPaginated(int page)
         {
-            var query = _categoryRepository.GetQueryable(x => true, "Products");
+            var query = _categoryRepository.GetQueryable(x => true, "Product");
             var entities = query.Skip((page - 1) * 4).Take(4).ToList();
             var items = _mapper.Map<List<CategoryGetPaginatedListItemDto>>(entities);
             return new PaginatedListDto<CategoryGetPaginatedListItemDto>(items, page, 4, query.Count());
@@ -56,7 +56,7 @@ namespace FamilyExperienceApp.Service.Implementations
 
         public CategoryGetDto GetById(int id)
         {
-            var entity = _categoryRepository.Get(x => x.Id == id, "Products");
+            var entity = _categoryRepository.Get(x => x.Id == id, "Product");
 
             if (entity == null)
             {
