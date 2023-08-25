@@ -46,6 +46,9 @@ namespace FamilyExperienceApp.Service.Profiles
                 .ForMember(d => d.ImageUrl, s => s.MapFrom(m => string.IsNullOrWhiteSpace(m.ImageName) ? null : (baseUrl + "uploads/sliders/" + m.ImageName)));
 
             CreateMap<Slider, SliderGetPaginatedListItemDto>();
+
+            CreateMap<ProductPostDto, Product>();
+            CreateMap<Product, ProductGetPaginatedListItemDto>();
         }
     }
 }
