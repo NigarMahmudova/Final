@@ -4,6 +4,7 @@ using FamilyExperienceApp.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FamilyExperienceApp.Migrations
 {
     [DbContext(typeof(FamilyExperienceDbContext))]
-    partial class FamilyExperienceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230825225701_AppUsersTableCreated")]
+    partial class AppUsersTableCreated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

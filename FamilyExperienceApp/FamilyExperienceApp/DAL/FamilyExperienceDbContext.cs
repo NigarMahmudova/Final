@@ -1,9 +1,10 @@
 ﻿using FamilyExperienceApp.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FamilyExperienceApp.DAL
 {
-    public class FamilyExperienceDbContext:DbContext
+    public class FamilyExperienceDbContext:IdentityDbContext
     {
         public FamilyExperienceDbContext(DbContextOptions<FamilyExperienceDbContext> options):base(options)
         {
@@ -17,6 +18,7 @@ namespace FamilyExperienceApp.DAL
         public DbSet<Setting> Settings { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductSize> ProductSizes { get; set; }
+        public DbSet<AppUser> AppUsers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

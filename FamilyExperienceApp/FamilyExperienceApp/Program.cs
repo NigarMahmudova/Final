@@ -1,9 +1,18 @@
 using FamilyExperienceApp.DAL;
+using FamilyExperienceApp.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+{
+    opt.Password.RequiredLength = 8;
+    opt.Password.RequireNonAlphanumeric = false;
+    opt.Lockout.MaxFailedAccessAttempts = 3;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(15);
+}).AddDefaultTokenProviders().AddEntityFrameworkStores<FamilyExperienceDbContext>();
 
 builder.Services.AddDbContext<FamilyExperienceDbContext>(opt =>
 {
