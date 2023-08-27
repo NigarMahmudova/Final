@@ -421,6 +421,10 @@
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\login.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\login.css"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\style.css"
     },
@@ -499,6 +503,10 @@
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\js\\custom.min.js",
       "PackagePath": "staticwebassets\\manage\\assets\\js\\custom.min.js"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\js\\login.js",
+      "PackagePath": "staticwebassets\\manage\\assets\\js\\login.js"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\js\\main.js",
@@ -1275,6 +1283,22 @@
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js.map",
       "PackagePath": "staticwebassets\\manage\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\products\\4a1eb9af-6fd3-45b7-ac1e-cf35d55e76c12023-07-23 20-55-08 (11).jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\products\\4a1eb9af-6fd3-45b7-ac1e-cf35d55e76c12023-07-23 20-55-08 (11).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\products\\ae18de72-3695-4142-bef6-df7ece701d722023-07-23 21-00-31.jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\products\\ae18de72-3695-4142-bef6-df7ece701d722023-07-23 21-00-31.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\products\\b2e18637-1648-478d-9b51-994bccb9ae3d2023-07-23 20-47-32 (16).jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\products\\b2e18637-1648-478d-9b51-994bccb9ae3d2023-07-23 20-47-32 (16).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\products\\b8993f6b-380d-4533-9ab0-e9ba75e6d347IMG_3915.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\products\\b8993f6b-380d-4533-9ab0-e9ba75e6d347IMG_3915.JPG"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FamilyExperienceApp.Microsoft.AspNetCore.StaticWebAssets.props",

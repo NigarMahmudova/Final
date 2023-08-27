@@ -1,11 +1,14 @@
 ﻿using FamilyExperienceApp.Areas.Manage.ViewModels;
 using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace FamilyExperienceApp.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "SuperAdmin")]
     [Area("manage")]
     public class AdminController : Controller
     {
@@ -23,8 +26,6 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
         {
 
             var data = _userManager.Users.Where(x => x.IsAdmin).ToList();
-
-            AppUser admin = await _userManager.FindByNameAsync(User.Identity.Name);
 
             List<AdminCreateVM> list = new List<AdminCreateVM>();
 

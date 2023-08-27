@@ -3,9 +3,12 @@ using FamilyExperienceApp.DAL;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FamilyExperienceApp.Areas.Manage.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace FamilyExperienceApp.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [Area("manage")]
     public class CategoryController : Controller
     {

@@ -2,11 +2,14 @@
 using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
 using FamilyExperienceApp.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace FamilyExperienceApp.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [Area("manage")]
     public class SliderController : Controller
     {

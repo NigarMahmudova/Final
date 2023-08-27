@@ -30,15 +30,15 @@ namespace FamilyExperienceApp.Entities
         public Color Color { get; set; }
 
         [NotMapped]
-        [MaxFileLength(2097152)]
+        [MaxFileLength(1073741824)]
         [AllowedContentTypes("image/png", "image/jpeg")]
         public IFormFile PosterFile { get; set; }
         [NotMapped]
-        [MaxFileLength(2097152)]
+        [MaxFileLength(1073741824)]
         [AllowedContentTypes("image/png", "image/jpeg")]
         public IFormFile HoverPosterFile { get; set; }
         [NotMapped]
-        [MaxFileLength(2097152)]
+        [MaxFileLength(1073741824)]
         [AllowedContentTypes("image/png", "image/jpeg")]
         public List<IFormFile> ImageFiles { get; set; } = new List<IFormFile>();
         [NotMapped]

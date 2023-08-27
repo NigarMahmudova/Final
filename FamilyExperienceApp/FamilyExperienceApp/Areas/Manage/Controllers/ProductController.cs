@@ -2,11 +2,14 @@
 using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
 using FamilyExperienceApp.Helpers;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 
 namespace FamilyExperienceApp.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [Area("manage")]
     public class ProductController : Controller
     {
@@ -20,22 +23,18 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
         }
         public IActionResult Index(int page = 1, string search = null)
         {
-            //ViewBag.Search = search;
-
-            //var query = _context.Products.Include(x => x.Category).Include(x => x.Color)
-            //    .Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => !x.IsDeleted).AsQueryable();
-
-            //if (search != null) query = query.Where(x => x.Name.Contains(search));
-
-            //var vm = PaginatedList<Product>.Create(query, page, 2);
-
-            //if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages, search = search });
-
-            //return View(vm);
+            ViewBag.Search = search;
 
             var query = _context.Products.Include(x => x.Category).Include(x => x.Color)
-                .Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => !x.IsDeleted);
-            return View(PaginatedList<Product>.Create(query, page, 4));
+                .Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => !x.IsDeleted).AsQueryable();
+
+            if (search != null) query = query.Where(x => x.Name.Contains(search));
+
+            var vm = PaginatedList<Product>.Create(query, page, 2);
+
+            if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages, search = search });
+
+            return View(vm);
         }
 
         public IActionResult Create()

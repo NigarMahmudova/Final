@@ -32,16 +32,16 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
         //{
         //    AppUser admin = new AppUser
         //    {
-        //        FullName = "Super Admin",
-        //        UserName = "SuperAdmin",
+        //        FullName = "Gunel Atlikhanova",
+        //        UserName = "GunelAdmin",
         //    };
 
         //    var result = await _userManager.CreateAsync(admin, "Admin123");
 
-        //    await _userManager.AddToRoleAsync(admin, "SuperAdmin");
+        //    await _userManager.AddToRoleAsync(admin, "Admin");
 
 
-        //    return Content("yaradildi");
+        //    return Content("created");
         //}
 
         public IActionResult Login()

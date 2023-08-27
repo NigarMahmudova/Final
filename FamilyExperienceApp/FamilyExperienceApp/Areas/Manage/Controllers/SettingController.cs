@@ -1,10 +1,13 @@
 ﻿using FamilyExperienceApp.Areas.Manage.ViewModels;
 using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace FamilyExperienceApp.Areas.Manage.Controllers
 {
+    [Authorize(Roles = "Admin,SuperAdmin")]
     [Area("manage")]
     public class SettingController : Controller
     {
