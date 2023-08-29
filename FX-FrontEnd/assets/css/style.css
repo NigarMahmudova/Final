@@ -14,6 +14,10 @@ a {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -252,7 +256,7 @@ body {
   right: -8px;
   top: 100%;
   visibility: hidden !important;
-  width: 315px;
+  width: 136px;
   border: 1px solid #000;
   background-color: #fff;
   display: block;
@@ -262,6 +266,9 @@ body {
 }
 .widget_fx_core_woo_dropdown_cart .fx-widget-dropdown-cart-content > * {
   padding: 0 26px !important;
+}
+.widget_fx_core_woo_dropdown_cart .fx-widget-dropdown-cart-content li a:hover {
+  border-bottom: 1px solid #000;
 }
 .widget_fx_core_woo_dropdown_cart :hover .fx-widget-dropdown-cart-content {
   opacity: 1 !important;
@@ -2804,4 +2811,147 @@ button.slick-prev:hover {
 }
 #fx-page-inner #card-list .cart_totals .fx-proceed-to-checkout:hover a {
   color: #fff !important;
+}
+
+#fx-page-content .fx-profile-content {
+  height: 375px;
+  background-image: url(../images/My-account-title-img.jpg);
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#fx-page-content .fx-profile-content h1 {
+  font-weight: 400;
+  color: #fff;
+  font-size: 50px;
+  line-height: 1.22em;
+  font-family: "Noto Sans", sans-serif;
+}
+#fx-page-content .info-tabmenu ul a {
+  font-size: 20px;
+}
+#fx-page-content .myaccount-content #reply-title {
+  font-weight: 400;
+  color: #000;
+  font-size: 24px;
+  line-height: 1.375em;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.fx-login-content {
+  padding: 170px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fx-login-content .login-content-wrapper {
+  width: 504px;
+  background-color: #fff;
+  border: 1px solid #707070;
+  padding: 24px 40px 40px 40px;
+}
+.fx-login-content .login-content-wrapper .login-label {
+  width: 100%;
+  margin: 0 0 23px;
+  text-align: center;
+  position: relative;
+  display: block;
+  font-weight: 400;
+  color: #000;
+  font-size: 29px;
+  line-height: 1.34483em;
+  font-family: "Noto Sans", sans-serif;
+}
+.fx-login-content .login-content-wrapper input {
+  margin: 0 0 23px;
+  width: 100%;
+  vertical-align: top;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 13px;
+  font-weight: inherit;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  outline: 0;
+  padding: 14.5px 22px;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  background-color: transparent;
+  border-color: #000;
+  color: #000;
+}
+.fx-login-content .login-content-wrapper input[type=checkbox] {
+  margin: 0;
+  width: 13px;
+  height: 13px;
+  outline: 0;
+  border: 1px solid #000;
+  margin-right: 10px;
+  position: relative;
+}
+.fx-login-content .login-content-wrapper .login-links-remember-label {
+  margin-bottom: 0;
+}
+.fx-login-content .login-content-wrapper .login-links-reset-password {
+  float: right;
+  border-bottom: 1px solid #000;
+}
+.fx-login-content .login-content-wrapper .login-action {
+  margin-top: 23px;
+  text-align: center;
+  display: block;
+}
+.fx-login-content .login-content-wrapper button {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  padding: 11px 49px;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.fx-login-content .login-content-wrapper button:hover {
+  color: #000;
+  background-color: #fff;
+  border-color: #000;
+}
+.fx-login-content .login-content-wrapper .login-links-register {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  border-bottom: 1px solid #000;
+}
+.fx-login-content .login-content-wrapper .login-links-register:hover {
+  border-bottom: 0;
 }/*# sourceMappingURL=style.css.map */
