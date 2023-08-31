@@ -1,5 +1,3 @@
-
-
 .fx-page-title {
   text-align: right;
   height: 100px;
@@ -7,7 +5,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 90px;
 
   .fx-breadcrumbs {
     padding-right: 70px;
@@ -135,8 +132,8 @@
 
       .fx-add-to-wishlist {
         position: absolute;
-        top: 21px;
-        right: 14px;
+        top: 0px;
+        right: 5px;
         font-family: "Noto Sans", sans-serif !important;
         font-size: 0 !important;
         margin: 0 !important;
@@ -146,6 +143,8 @@
         opacity: 1;
         transform: translateY(10px);
         transition: 0.5s cubic-bezier(0.12, 0.48, 0.05, 0.96);
+
+        
 
         a {
           color: #fff !important;
@@ -177,13 +176,14 @@
             opacity: 0;
             transition: opacity 0.25s ease-out;
           }
+
         }
       }
 
       .fx-button {
         position: absolute;
-        top: 21px;
-        right: 14px;
+        top: 24px;
+        right: 9px;
         opacity: 1;
         transform: translateY(10px);
         transition: 0.5s cubic-bezier(0.12, 0.48, 0.05, 0.96);
@@ -218,7 +218,7 @@
       transition: transform 0.5s cubic-bezier(0.33, 0.02, 0, 0.93);
     }
 
-    :hover .fx-product-image-inner {
+    &:hover .fx-product-image-inner {
       opacity: 1;
     }
   }
@@ -238,6 +238,7 @@
       max-width: 74%;
       text-align: start;
       margin-bottom: 20px;
+      cursor: pointer;
     }
 
     .fx-e-info > * {
