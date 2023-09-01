@@ -854,11 +854,11 @@
     padding: 40px 47px 28px 28px;
   }
 
-  h1{
+  h1 {
     font-weight: 400;
     color: #000;
     font-size: 50px;
-    font-family: "Noto Sans",sans-serif;
+    font-family: "Noto Sans", sans-serif;
   }
 
   .price {
@@ -896,13 +896,13 @@
     }
   }
 
-  button{
+  button {
     padding: 11px 31px;
-    font-family: "Noto Sans",sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 12px;
     font-weight: 600;
     line-height: 1.417em;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     position: relative;
     display: inline-flex;
     vertical-align: middle;
@@ -912,7 +912,8 @@
     text-transform: uppercase;
     border-radius: 0;
     outline: 0;
-    transition: color .25s ease-out,background-color .25s ease-out,border-color .25s ease-out;
+    transition: color 0.25s ease-out, background-color 0.25s ease-out,
+      border-color 0.25s ease-out;
     padding: 11px 49px;
     cursor: pointer;
     z-index: 3;
@@ -922,21 +923,154 @@
     margin-top: 15px;
     margin-bottom: 40px;
 
-    &:hover{
+    &:hover {
       color: #fff;
-    background-color: #000;
-    border-color: #000;
+      background-color: #000;
+      border-color: #000;
     }
   }
 
-  .quick-view-shortcode{
+  .quick-view-shortcode {
     position: absolute;
     right: 28px;
     bottom: 29px;
     border-bottom: 1px solid #000;
 
-    &:hover{
+    &:hover {
       border: 0;
+    }
+  }
+}
+
+// Adds section start
+.adds {
+  padding: 85px 0 0;
+  .adds-inner {
+    width: 100%;
+
+    .adds-media-image {
+      width: 100%;
+      overflow: hidden;
+      margin-bottom: 7px;
+
+      a {
+        transition: color 0.25s ease-out;
+        cursor: pointer;
+      }
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        --qodef-scale: 1.01;
+        transform: scale(var(--qodef-scale));
+        transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        &:hover {
+          --qodef-scale: 1.04;
+          transform: scale(var(--qodef-scale));
+          transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+      }
+    }
+
+    .adds-content {
+      width: 100%;
+
+      .adds-top-holder {
+        border-bottom: 1px solid #000;
+        text-align: center;
+        margin-bottom: 14px;
+
+        .adds-info {
+          margin-bottom: 7px;
+          font-size: 13px;
+          line-height: 1.38462em;
+          letter-spacing: 0.05em;
+          font-weight: 500;
+          font-family: "Noto Sans", sans-serif;
+          display: inline-flex;
+          vertical-align: middle;
+          flex-wrap: wrap;
+          color: #000;
+
+          .adds-info-category > * {
+            text-transform: uppercase;
+            font-family: "Nunito Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 16px;
+            color: #000;
+            --qodef-underline-position-y: 100%;
+            --qodef-underline-height: 1px;
+            background-repeat: no-repeat;
+            background-image: linear-gradient(
+              90deg,
+              currentColor 0,
+              currentColor 100%
+            );
+            transition: background-size 0.4s cubic-bezier(0.51, 0.5, 0.07, 0.99),
+              color 0.25s ease-out;
+            background-position: 100% var(--qodef-underline-position-y);
+            background-size: 0 var(--qodef-underline-height);
+          }
+
+          .adds-info-separator {
+            position: relative;
+            top: -1px;
+            margin: 0 8px;
+          }
+        }
+      }
+
+      .adds-text {
+        text-align: center;
+        a {
+          font-family: "Nunito Sans", sans-serif;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: 18px;
+        }
+
+        .adds-view-more {
+          margin-top: 25px;
+
+          .adds-shortcode {
+            padding: 0 !important;
+            color: #000;
+            background-color: transparent;
+            border: 0;
+            position: relative;
+            overflow: hidden;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 1.417em;
+            letter-spacing: 0.1em;
+            position: relative;
+            display: inline-flex;
+            vertical-align: middle;
+            width: auto;
+            margin: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-radius: 0;
+            outline: 0;
+            transition: color 0.25s ease-out, background-color 0.25s ease-out,
+              border-color 0.25s ease-out;
+
+            border-bottom: 1px solid #000;
+
+            &:hover{
+              border: 0;
+            }
+          }
+        }
+      }
     }
   }
 }

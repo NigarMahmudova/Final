@@ -696,3 +696,63 @@
     }
   }
 }
+
+.summary-content{
+  .right_line {
+    width: 100%;
+  
+    select {
+      width: 100%;
+      float: left;
+      height: 40px;
+      padding: 0 10px;
+      color: #000;
+      font-size: 14px;
+      font-weight: 400;
+      border: 1px solid #d7d7d8;
+      line-height: 43px;
+      -webkit-appearance: none;
+      text-indent: 1px;
+      background: url(https://static.ticimax.cloud/52168/Uploads/EditorUploads/suud-image/select-icon.svg);
+      background-repeat: no-repeat;
+      background-size: 10px 6px;
+      background-position: 97% 50%;
+    }
+  }
+  
+  button {
+    padding: 11px 31px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.417em;
+    letter-spacing: 0.1em;
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    width: auto;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    outline: 0;
+    transition: color 0.25s ease-out, background-color 0.25s ease-out,
+      border-color 0.25s ease-out;
+    padding: 11px 49px;
+    cursor: pointer;
+    z-index: 3;
+    color: #000;
+    background-color: transparent;
+    border: 1px solid #000;
+    margin-top: 15px;
+    margin-bottom: 40px;
+  
+    &:hover {
+      color: #fff;
+      background-color: #000;
+      border-color: #000;
+    }
+  }
+}
+
+

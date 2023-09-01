@@ -363,13 +363,93 @@
 
                             <div class="rowlist">
                                 
-                                
+                                <table class="cart" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th class="product-remove"><span class="screen-reader-text">Remove
+                                                    item</span></th>
+                                            <th class="product-thumbnail"><span class="screen-reader-text">Thumbnail
+                                                    image</span></th>
+                                            <th class="product-name">Product</th>
+                                            <th class="product-price">Price</th>
+                                            <th class="product-quantity">Quantity</th>
+                                            <th class="product-subtotal">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+    
+                                        <tr class="fx-cart-form__cart-item cart_item">
+                                            
+                                            <td class="product-remove" style="cursor: pointer">
+                                                <i class="fa-regular fa-x"></i>
+                                            </td>
+    
+
+
+                                            <td class="product-thumbnail">
+                                                <a href="#">
+                                                    <img
+                                                        width="600" height="734" src="https://corsen.qodeinteractive.com/wp-content/uploads/2022/09/Product-img-7-600x734.jpg"
+                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="a">
+                                                </a>
+                                            </td>
+    
+                                            <td class="product-name" data-title="Product">
+                                                <a href="#">Black Outfit</a>
+                                            </td>
+    
+                                            <td class="product-price" data-title="Price">
+                                                <span class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>220.00</bdi></span>
+                                            </td>
+    
+                                            <td class="product-quantity" data-title="Quantity">
+                                                <div class="fx-quantity-buttons quantity">
+                                                    <span class="fx-quantity-minus"></span>
+                                                    <input type="text" id="quantity" class="fx-quantity-input"
+                                                        data-min="0" data-max="" value="1" inputmode="numeric">
+                                                    <span class="fx-quantity-plus"></span>
+                                                </div>
+                                            </td>
+    
+                                            <td class="product-subtotal" data-title="Subtotal">
+                                                <span class="woocommerce-Price-amount amount"><bdi><span
+                                                            class="woocommerce-Price-currencySymbol">$</span>220</bdi></span>
+                                            </td>
+                                        </tr>
+    
+    
+                                        <tr>
+                                            <td colspan="6" class="actions">
+    
+                                                <div class="coupon">
+                                                    <label for="coupon_code" class="d-none">Coupon:</label> 
+                                                    <input type="text"
+                                                        name="coupon_code" class="input-text" id="coupon_code" value=""
+                                                        placeholder="Coupon code"> <button type="submit"
+                                                        class="button wp-element-button" name="apply_coupon"
+                                                        value="Apply coupon">Apply coupon</button>
+                                                </div>
+    
+                                                <button type="submit" class="button wp-element-button" name="update_cart"
+                                                    value="Update cart" disabled="" aria-disabled="true">Update
+                                                    cart</button>
+    
+    
+                                                <input type="hidden" id="woocommerce-cart-nonce"
+                                                    name="woocommerce-cart-nonce" value="23f1453aa6"><input type="hidden"
+                                                    name="_wp_http_referer" value="/cart/">
+                                            </td>
+                                        </tr>
+    
+                                    </tbody>
+                                </table>
 
                             </div>
                             
 
 
-                            <div id="content" class="cart-collaterals d-none">
+                            <div id="content" class="cart-collaterals">
                                 <div class="cart_totals ">
 
 
@@ -553,7 +633,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="./assets/js/app.js"></script>
-    <script src="./assets/js/basket.js"></script>
+    <!-- <script src="./assets/js/basket.js"></script> -->
 
 
 </body>

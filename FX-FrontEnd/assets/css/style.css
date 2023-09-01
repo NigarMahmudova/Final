@@ -24,6 +24,8 @@ body {
 @font-face {
   font-family: "Noto Sans", sans-serif;
   src: url(../fonts/NotoSans-Bold.ttf);
+  font-family: "Nunito Sans", sans-serif;
+  src: url(../fonts/NotoSans-Bold.ttf);
 }
 
 #fx-page-header {
@@ -1250,6 +1252,119 @@ button {
   border: 0;
 }
 
+.adds {
+  padding: 85px 0 0;
+}
+.adds .adds-inner {
+  width: 100%;
+}
+.adds .adds-inner .adds-media-image {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 7px;
+}
+.adds .adds-inner .adds-media-image a {
+  transition: color 0.25s ease-out;
+  cursor: pointer;
+}
+.adds .adds-inner .adds-media-image img {
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  --qodef-scale: 1.01;
+  transform: scale(var(--qodef-scale));
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.adds .adds-inner .adds-media-image img:hover {
+  --qodef-scale: 1.04;
+  transform: scale(var(--qodef-scale));
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.adds .adds-inner .adds-content {
+  width: 100%;
+}
+.adds .adds-inner .adds-content .adds-top-holder {
+  border-bottom: 1px solid #000;
+  text-align: center;
+  margin-bottom: 14px;
+}
+.adds .adds-inner .adds-content .adds-top-holder .adds-info {
+  margin-bottom: 7px;
+  font-size: 13px;
+  line-height: 1.38462em;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-family: "Noto Sans", sans-serif;
+  display: inline-flex;
+  vertical-align: middle;
+  flex-wrap: wrap;
+  color: #000;
+}
+.adds .adds-inner .adds-content .adds-top-holder .adds-info .adds-info-category > * {
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 16px;
+  color: #000;
+  --qodef-underline-position-y: 100%;
+  --qodef-underline-height: 1px;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
+  transition: background-size 0.4s cubic-bezier(0.51, 0.5, 0.07, 0.99), color 0.25s ease-out;
+  background-position: 100% var(--qodef-underline-position-y);
+  background-size: 0 var(--qodef-underline-height);
+}
+.adds .adds-inner .adds-content .adds-top-holder .adds-info .adds-info-separator {
+  position: relative;
+  top: -1px;
+  margin: 0 8px;
+}
+.adds .adds-inner .adds-content .adds-text {
+  text-align: center;
+}
+.adds .adds-inner .adds-content .adds-text a {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.adds .adds-inner .adds-content .adds-text .adds-view-more {
+  margin-top: 25px;
+}
+.adds .adds-inner .adds-content .adds-text .adds-view-more .adds-shortcode {
+  padding: 0 !important;
+  color: #000;
+  background-color: transparent;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  border-bottom: 1px solid #000;
+}
+.adds .adds-inner .adds-content .adds-text .adds-view-more .adds-shortcode:hover {
+  border: 0;
+}
+
 .fx-page-title {
   text-align: right;
   height: 100px;
@@ -2335,6 +2450,58 @@ button {
 .fx-tabs-wrapper .fx-Tabs-panel .fx-Reviews #review_form_wrapper #review_form #respond .fx-comment-form .form-submit button:hover {
   color: #000;
   background-color: #fff;
+  border-color: #000;
+}
+
+.summary-content .right_line {
+  width: 100%;
+}
+.summary-content .right_line select {
+  width: 100%;
+  float: left;
+  height: 40px;
+  padding: 0 10px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #d7d7d8;
+  line-height: 43px;
+  -webkit-appearance: none;
+  text-indent: 1px;
+  background: url(https://static.ticimax.cloud/52168/Uploads/EditorUploads/suud-image/select-icon.svg);
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  background-position: 97% 50%;
+}
+.summary-content button {
+  padding: 11px 31px;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.417em;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-flex;
+  vertical-align: middle;
+  width: auto;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 0;
+  outline: 0;
+  transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+  padding: 11px 49px;
+  cursor: pointer;
+  z-index: 3;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+.summary-content button:hover {
+  color: #fff;
+  background-color: #000;
   border-color: #000;
 }
 

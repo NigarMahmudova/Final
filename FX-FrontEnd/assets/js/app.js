@@ -5,7 +5,8 @@
 let tabs = document.querySelectorAll('.tabs li');
 
 for(let tab of tabs){
-    tab.onclick = function(){
+    tab.onclick = function(e){
+        e.preventDefault();
         let active = document.querySelector('.active');
         
         active.classList.remove('active');
@@ -28,47 +29,47 @@ for(let tab of tabs){
 
 // Add to cart
 
-if (localStorage.getItem('cards') === null) {
-    localStorage.setItem('cards', JSON.stringify([]))
-}
+// if (localStorage.getItem('cards') === null) {
+//     localStorage.setItem('cards', JSON.stringify([]))
+// }
 
-let buttons = document.querySelectorAll('.js_add_to_cart');
+// let buttons = document.querySelectorAll('.js_add_to_cart');
 
-for(let btn of buttons) {
-    btn.onclick = function(e) {
-        e.preventDefault();
-        let id = this.parentElement.parentElement.id;
-        let src = this.parentElement.parentElement.children[0].children[1].src;
-        let cardName = this.parentElement.children[0].children[0].innerHTML;
-        let cardPrice = this.parentElement.children[1].children[0].children[1].innerHTML;
+// for(let btn of buttons) {
+//     btn.onclick = function(e) {
+//         e.preventDefault();
+//         let id = this.parentElement.parentElement.id;
+//         let src = this.parentElement.parentElement.children[0].children[1].src;
+//         let cardName = this.parentElement.children[0].children[0].innerHTML;
+//         let cardPrice = this.parentElement.children[1].children[0].children[1].innerHTML;
         
-        let card_list = JSON.parse(localStorage.getItem('cards'));
+//         let card_list = JSON.parse(localStorage.getItem('cards'));
 
-        let existCard = card_list.find(item => item.Id === id);
+//         let existCard = card_list.find(item => item.Id === id);
 
-        if (existCard === undefined) {
-            card_list.push({
-                Id: id,
-                Image: src,
-                Name: cardName,
-                Price: cardPrice,
-                Count: 1
-            })
-        } else {
-            existCard.Count++;
-        }
+//         if (existCard === undefined) {
+//             card_list.push({
+//                 Id: id,
+//                 Image: src,
+//                 Name: cardName,
+//                 Price: cardPrice,
+//                 Count: 1
+//             })
+//         } else {
+//             existCard.Count++;
+//         }
 
-        localStorage.setItem('cards', JSON.stringify(card_list));
-        // document.querySelector('.alert-box').style.display = 'block';
-        // setTimeout(() => {
-        // document.querySelector('.alert-box').style.display = 'none';
-        // }, 1000);
-        ShowCount();
-    }
-}
+//         localStorage.setItem('cards', JSON.stringify(card_list));
+//         // document.querySelector('.alert-box').style.display = 'block';
+//         // setTimeout(() => {
+//         // document.querySelector('.alert-box').style.display = 'none';
+//         // }, 1000);
+//         ShowCount();
+//     }
+// }
 
- function ShowCount(){
-    let card_list = JSON.parse(localStorage.getItem('cards'));
-    document.querySelector('#count').innerHTML = card_list.length;
-}
-ShowCount();
+//  function ShowCount(){
+//     let card_list = JSON.parse(localStorage.getItem('cards'));
+//     document.querySelector('#count').innerHTML = card_list.length;
+// }
+// ShowCount();
