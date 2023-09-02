@@ -28,6 +28,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Banner/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJhbm5lclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Banner/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJhbm5lclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Banner/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEJhbm5lclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Carousel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcm91c2VsXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Carousel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcm91c2VsXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Carousel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhcm91c2VsXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -54,6 +78,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Gender/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEdlbmRlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Gender/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEdlbmRlclxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Gender/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEdlbmRlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Areas/Manage/Views/Product/Create.cshtml]
@@ -114,6 +150,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Views/Shared/_ProductTabContentPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0VGFiQ29udGVudFBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User Widnows 10 Home/Desktop/Final/FamilyExperienceApp/FamilyExperienceApp/Views/_ViewImports.cshtml]

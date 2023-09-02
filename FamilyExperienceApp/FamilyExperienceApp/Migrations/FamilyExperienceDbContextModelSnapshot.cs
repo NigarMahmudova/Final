@@ -22,6 +22,43 @@ namespace FamilyExperienceApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
+            modelBuilder.Entity("FamilyExperienceApp.Entities.Banner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("BtnText")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("BtnUrl")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("ImageName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("SubTitle1")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("SubTitle2")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Banners");
+                });
+
             modelBuilder.Entity("FamilyExperienceApp.Entities.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -58,6 +95,52 @@ namespace FamilyExperienceApp.Migrations
                     b.ToTable("Colors");
                 });
 
+            modelBuilder.Entity("FamilyExperienceApp.Entities.Gender", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("BtnText")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("BtnUrl")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("ImageName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Title")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genders");
+                });
+
+            modelBuilder.Entity("FamilyExperienceApp.Entities.ImageCarousel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ImageName")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ImageCarousels");
+                });
+
             modelBuilder.Entity("FamilyExperienceApp.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -79,13 +162,16 @@ namespace FamilyExperienceApp.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<decimal>("DiscountPercent")
+                    b.Property<decimal>("DiscountedPrice")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<bool?>("Gender")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsFavorite")
                         .HasColumnType("bit");
 
                     b.Property<bool>("IsNew")
@@ -96,8 +182,14 @@ namespace FamilyExperienceApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
+                    b.Property<int>("Order")
+                        .HasColumnType("int");
+
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<bool?>("Season")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("StockStatus")
                         .HasColumnType("bit");

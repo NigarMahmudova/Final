@@ -1,0 +1,87 @@
+﻿
+@model List<Product>
+
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 col-md-6 col-12">
+            <div id="1" class="fx-e-inner fx-line">
+                <div class="fx-product-image">
+                    @if(item.IsNew){
+                        <span class="fx-product-mark fx-new">New</span>
+                    }
+                    <img width="410" height="556"
+                     src="~/manage/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.PosterStatus==true)?.ImageName"
+                     class="attachment-full size-full" alt="a" />
+                    <div class="fx-e-image-hover">
+                        <img width="410" height="556"
+                         src="~/manage/uploads/products/@item.ProductImages.FirstOrDefault(x=>x.PosterStatus==false)?.ImageName"
+                         class="attachment-full size-full" alt="" />
+                    </div>
+                    <div class="fx-product-image-inner">
+                        <div class="fx-add-to-wishlist">
+
+                            <div class="fx-add-button">
+                                <a href="index626b.html?add_to_wishlist=237&amp;_wpnonce=19fbfce4e3"
+                               class="add_to_wishlist single_add_to_wishlist"
+                               data-product-id="237"
+                               data-product-type="simple"
+                               data-original-product-id="237"
+                               data-title="Add to wishlist"
+                               rel="nofollow">
+                                    <i class="fx-icon fa fa-heart-o"></i>
+                                    <span>Add to wishlist</span>
+                                </a>
+                            </div>
+
+                        </div>
+                        <a href="#" class="button fx-button">
+                            Quick
+                            View
+                        </a>
+                    </div>
+                    <a href="detail.html"
+                   class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                </div>
+                <div class="fx-product-content d-flex">
+                    <h6 itemprop="name"
+                    class="fx-product-title entry-title">
+                        <a itemprop="url" class="fx-product-title-link"
+                       href="detail.html">
+                            @item.Name
+                        </a>
+                    </h6>
+                    <div class="fx-product-price price">
+                        @if(item.DiscountedPrice > 0)
+                        {
+                            <del aria-hidden="true">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">&#036;</span>@item.SalePrice
+                                </span>
+                            </del>
+                            <ins>
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">&#036;</span>@item.DiscountedPrice
+                                </span>
+                            </ins>
+                        }
+                        else
+                        {
+                            <ins>
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">&#036;</span>@item.SalePrice
+                                </span>
+                            </ins>
+                        }
+
+                    </div>
+                    <button class="button wp-element-button product_type_simple modal_opener">
+                        Add
+                        to cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    }
+</div>

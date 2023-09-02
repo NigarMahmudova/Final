@@ -69,7 +69,7 @@
                                             <th scope="col">Category</th>
                                             <th scope="col">SalePrice</th>
                                             <th scope="col">CostPrice</th>
-                                            <th scope="col">DiscountPercent</th>
+                                            <th scope="col">DiscountedPrice</th>
                                             <th scope="col">İmage</th>
                                             <th scope="col">Action</th>
                                         </tr>
@@ -84,7 +84,7 @@
                                     <td>@item.Category.Name</td>
                                     <td>@item.SalePrice</td>
                                     <td>@item.CostPrice</td>
-                                    <td>@item.DiscountPercent</td>
+                                    <td>@item.DiscountedPrice</td>
                                     <td>
                                         <img width="150" src="~/manage/uploads/products/@item.ProductImages.FirstOrDefault()?.ImageName">
                                     </td>

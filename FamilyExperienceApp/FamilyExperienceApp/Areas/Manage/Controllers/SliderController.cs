@@ -23,13 +23,16 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
         }
         public IActionResult Index(int page = 1)
         {
+            //var query = _context.Sliders.AsQueryable();
+
+            //var vm = PaginatedList<Slider>.Create(query, page, 2);
+
+            //if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages });
+
+            //return View(vm);
+
             var query = _context.Sliders.AsQueryable();
-
-            var vm = PaginatedList<Slider>.Create(query, page, 2);
-
-            if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages });
-
-            return View(vm);
+            return View(PaginatedList<Slider>.Create(query, page, 4));
         }
 
         public IActionResult Create()

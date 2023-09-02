@@ -7,7 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\assets\" />
+    <Folder Include="wwwroot\assets\icons\" />
+    <Folder Include="wwwroot\manage\uploads\genders\" />
+    <Folder Include="wwwroot\manage\uploads\banners\" />
+    <Folder Include="wwwroot\manage\uploads\carousels\" />
     <Folder Include="wwwroot\manage\uploads\products\" />
     <Folder Include="wwwroot\manage\uploads\sliders\" />
   </ItemGroup>
@@ -20,6 +23,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
   </ItemGroup>
 
 </Project>

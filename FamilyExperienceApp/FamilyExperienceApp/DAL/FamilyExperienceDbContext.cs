@@ -15,6 +15,9 @@ namespace FamilyExperienceApp.DAL
         public DbSet<Size> Sizes { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Banner> Banners { get; set; }
+        public DbSet<ImageCarousel> ImageCarousels { get; set; }
         public DbSet<Setting> Settings { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<ProductSize> ProductSizes { get; set; }

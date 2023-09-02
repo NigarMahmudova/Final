@@ -20,7 +20,7 @@ namespace FamilyExperienceApp.Entities
         public string ImageName { get; set; }
 
         [NotMapped]
-        [MaxFileLength(2097152)]
+        [MaxFileLength(1073741824)]
         [AllowedContentTypes("image/jpeg", "image/jpg", "image/png")]
         public IFormFile ImageFile { get; set; }
 

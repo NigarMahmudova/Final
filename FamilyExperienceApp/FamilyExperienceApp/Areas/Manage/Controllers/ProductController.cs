@@ -23,18 +23,22 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
         }
         public IActionResult Index(int page = 1, string search = null)
         {
-            ViewBag.Search = search;
+            //ViewBag.Search = search;
+
+            //var query = _context.Products.Include(x => x.Category).Include(x => x.Color)
+            //    .Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => !x.IsDeleted).AsQueryable();
+
+            //if (search != null) query = query.Where(x => x.Name.Contains(search));
+
+            //var vm = PaginatedList<Product>.Create(query, page, 2);
+
+            //if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages, search = search });
+
+            //return View(vm);
 
             var query = _context.Products.Include(x => x.Category).Include(x => x.Color)
-                .Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => !x.IsDeleted).AsQueryable();
-
-            if (search != null) query = query.Where(x => x.Name.Contains(search));
-
-            var vm = PaginatedList<Product>.Create(query, page, 2);
-
-            if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages, search = search });
-
-            return View(vm);
+              .Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => !x.IsDeleted);
+            return View(PaginatedList<Product>.Create(query, page, 4));
         }
 
         public IActionResult Create()
@@ -157,12 +161,15 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
 
             existProduct.Name = product.Name;
             existProduct.Desc = product.Desc;
+            existProduct.Order = product.Order;
             existProduct.SalePrice = product.SalePrice;
             existProduct.CostPrice = product.CostPrice;
-            existProduct.DiscountPercent = product.DiscountPercent;
+            existProduct.DiscountedPrice = product.DiscountedPrice;
             existProduct.StockStatus = product.StockStatus;
             existProduct.IsNew = product.IsNew;
+            existProduct.IsFavorite = product.IsFavorite;
             existProduct.Gender = product.Gender;
+            existProduct.Season = product.Season;
             existProduct.CategoryId = product.CategoryId;
             existProduct.ColorId = product.ColorId;
 

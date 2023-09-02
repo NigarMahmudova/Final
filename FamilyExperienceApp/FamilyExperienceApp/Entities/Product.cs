@@ -10,6 +10,7 @@ namespace FamilyExperienceApp.Entities
         public int Id { get; set; }
         public int CategoryId { get; set; }
         public int ColorId { get; set; }
+        public int Order { get; set; }
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
@@ -20,11 +21,13 @@ namespace FamilyExperienceApp.Entities
         [Column(TypeName = "decimal(18,2)")]
         public decimal CostPrice { get; set; }
         [Column(TypeName = "decimal(18,2)")]
-        public decimal DiscountPercent { get; set; }
+        public decimal DiscountedPrice { get; set; }
         public bool StockStatus { get; set; }
         public bool IsNew { get; set; }
+        public bool IsFavorite { get; set; }
         public bool IsDeleted { get; set; }
         public bool? Gender { get; set; }
+        public bool? Season { get; set; }
 
         public Category Category { get; set; }
         public Color Color { get; set; }

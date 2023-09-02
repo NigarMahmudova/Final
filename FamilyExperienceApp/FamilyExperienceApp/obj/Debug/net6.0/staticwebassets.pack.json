@@ -1,6 +1,230 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_basket.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_basket.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_checkout.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_checkout.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_detail.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_index.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_index.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_login_register.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_login_register.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_profile.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_profile.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_reset.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_shop.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_shop.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_static.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_static.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\_wishlist.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\_wishlist.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\carousel.css",
+      "PackagePath": "staticwebassets\\assets\\css\\carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\plugins.css",
+      "PackagePath": "staticwebassets\\assets\\css\\plugins.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\slider.css",
+      "PackagePath": "staticwebassets\\assets\\css\\slider.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\style.scss",
+      "PackagePath": "staticwebassets\\assets\\css\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Black.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Black.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-BlackItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-BlackItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-BoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-BoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-ExtraBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-ExtraBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-ExtraBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-ExtraBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-ExtraLight.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-ExtraLight.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-ExtraLightItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-ExtraLightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Italic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Italic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Light.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-LightItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-LightItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Medium.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Medium.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-MediumItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-MediumItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Regular.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-SemiBold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-SemiBold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-SemiBoldItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-SemiBoldItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-Thin.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-Thin.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\fonts\\NotoSans-ThinItalic.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\NotoSans-ThinItalic.ttf"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\My-account-title-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\My-account-title-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\Wishlist-title-area-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\Wishlist-title-area-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\cart-button.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\cart-button.svg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\fx_logo-removebg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\fx_logo-removebg.png"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\fx_logo.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\fx_logo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\main-home-image-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\main-home-image-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\products\\2023-07-23 20-47-32 (16).jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\2023-07-23 20-47-32 (16).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\products\\2023-07-23 20-55-08 (11).jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\2023-07-23 20-55-08 (11).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\products\\2023-07-23 21-00-31.jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\2023-07-23 21-00-31.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\products\\2023-07-23 21-08-14 (1).jpeg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\2023-07-23 21-08-14 (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\products\\IMG_3183.JPG",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\IMG_3183.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\products\\IMG_3915.JPG",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\IMG_3915.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\quick-view.png",
+      "PackagePath": "staticwebassets\\assets\\images\\quick-view.png"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\quick-view.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\quick-view.svg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\wishlist-add.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\wishlist-add.svg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\images\\wishlist-added.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\wishlist-added.svg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\js\\active.js",
+      "PackagePath": "staticwebassets\\assets\\js\\active.js"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\js\\app.js",
+      "PackagePath": "staticwebassets\\assets\\js\\app.js"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\js\\basket.js",
+      "PackagePath": "staticwebassets\\assets\\js\\basket.js"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins.js"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\material-design-iconic-font\\css\\material-design-iconic-font.css"
     },
@@ -329,6 +553,14 @@
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-time.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind-aliases.scss"
     },
@@ -341,36 +573,108 @@
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-classes\\classes-wind.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-beaufort.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.css.map"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-day.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-direction.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.css.map"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-misc.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-moon.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.css.map"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-neutral.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-night.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-time.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.css.map"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\icon-variables\\variables-wind-names.scss",
@@ -397,8 +701,24 @@
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-classes.scss"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-core.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-core.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-core.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-core.css.map"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-core.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-core.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-variables.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-variables.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-variables.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-variables.css.map"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-variables.scss",
@@ -411,6 +731,22 @@
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-wind.scss",
       "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons-wind.scss"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.min.css",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.min.css.map",
+      "PackagePath": "staticwebassets\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.min.css.map"
     },
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\assets\\css\\icons\\weather-icons\\sass\\weather-icons.min.scss",
