@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@inject LayoutService _layoutService
+@{
+    var basket = _layoutService.GetBasket();
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,7 +24,7 @@
 
     <link rel="stylesheet" href="~/./assets/css/slider.css" />
     <link rel="stylesheet" href="~/./assets/css/carousel.css" />
-    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/./assets/css/style.css" />
 </head>
 
 <body>
@@ -84,7 +89,7 @@
                     class="widget widget_fx_core_woo_dropdown_cart fx-header-widget-area-one">
                     <div class="fx-widget-dropdown-cart-outer">
                         <div class="fx-widget-dropdown-cart-inner">
-                            <a class="fx-m-opener" href="basket.html">
+                            <a class="fx-m-opener" asp-controller="basket" asp-action="index">
                                 <span class="fx-m-opener-text">Cart</span>
                                 <span class="fx-m-opener-icon">
                                     <svg class="fx-svg--cart" xmlns="http://www.w3.org/2000/svg" width="12.578"
@@ -151,9 +156,9 @@
                             </span>
                         </a>
                         <ul class="dropdown-list fx-widget-dropdown-cart-content">
-                            <li><a href="login.html">login</a></li>
-                            <li><a href="register.html">register</a></li>
-                            <li><a href="profile.html">my account</a></li>
+                            <li><a asp-controller="account" asp-action="login">login</a></li>
+                            <li><a asp-controller="account" asp-action="register">register</a></li>
+                            <li><a asp-controller="account" asp-action="profile">my account</a></li>
                         </ul>
                     </div>
                 </div>
@@ -423,82 +428,7 @@
     <!-- Footer section end -->
 
 
-    <div id="quick-view-modal" class="">
-        <div class="quick-view-overlay"></div>
-        <div class="quick-view-wrapper" style="left: 192.5px; width: 964px; height: 2px;">
-            <div class="quick-view-main">
-                <div class="quick-view-head">
-                    <a href="#" id="quick-view-close">X</a>
-                </div>
-                <div id="quick-view-content">
-                    <div class="row">
-
-                        <div class="col-lg-6">
-                            <div class="single-img">
-                                <img height="480px" src="~/./assets/images/products/2023-07-23 20-55-08 (11).jpeg"
-                                    alt="" />
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="summary-content">
-                                <h1 class="modal-title">Leather Jacket
-                                </h1>
-                                <p class="price"><span class="modal-amount"><bdi><span
-                                                class="modal-Price-currencySymbol">$</span>300.00</bdi></span>
-                                </p>
-                                <div class="modal-desc">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscite elit, sed do eiusmod
-                                        tempor incididunt ut laboreet dolore magna aliqua. Ut enim ad minim .
-                                    </p>
-                                </div>
-
-                                <!-- color -->
-                                <div class="ilgiliUrunSecenek" id="productDetailRelated">
-                                    <a class="detailLink detailUrl" href="#">
-                                        <div class="color-box"
-                                            style="background-color: black; width: 20px; height: 20px; margin-bottom: 15px;">
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <!-- size -->
-                                <div class="MiddleList" style="margin-top: 0px;">
-                                    <div id="divUrunEkSecenek" class="Formline BorderNone">
-                                        <div class="eksecenekLine selectvaryasyon">
-                                            <span class="right_line">
-                                                <select name="ddlEkSecenek0" class="eksecenekSelect">
-                                                    <option value="-1">Select</option>
-                                                    <option disabled="" nostock="true">XS</option>
-                                                    <option tipid="2" value="8">S</option>
-                                                    <option tipid="2" value="9">M</option>
-                                                    <option tipid="2" value="10">L</option>
-                                                    <option tipid="2" value="13">XL</option>
-                                                </select>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div id="divStokYok" style="display: none;">
-                                        Item is out of stock.
-                                    </div>
-                                    <div class="buybutton" id="divSatinAl">
-                                        <button type="submit" name="add-to-cart" value="246"
-                                            class="js_add_to_cart button alt wp-element-button">Add to
-                                            cart</button>
-                                    </div>
-                                </div>
-
-                                <a class="quick-view-shortcode" href="detail.html" target="_self">
-                                    <span class="qodef-m-text">View More</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
@@ -586,24 +516,13 @@
             });
         });
 
-        // Add-to-cart functionality
-        let modal_open = document.querySelector('.modal_opener');
-        let modal = document.querySelector('#quick-view-modal');
-
-        modal_open.onclick = function (e) {
-            e.preventDefault();
-            modal.classList.add('open');
-        }
-
-        let modal_close = document.querySelector('#quick-view-close');
-        modal_close.onclick = function (e) {
-            e.preventDefault();
-            modal.classList.remove('open');
-        }
+         //Add-to-cart functionality
+        
 
     </script>
 
     <script src="~/./assets/js/app.js"></script>
+    <script src="~/./assets/js/main.js"></script>
     <!-- <script src="./assets/js/basket.js"></script> -->
 
 </body>

@@ -76,10 +76,9 @@
                         }
 
                     </div>
-                    <button class="button wp-element-button product_type_simple modal_opener">
-                        Add
-                        to cart
-                    </button>
+                    <a asp-controller="product" asp-action="getdetail" asp-route-id="@item.Id" data-toggle="modal" class="button modal-btn">
+                        Add to cart
+                    </a>
                 </div>
             </div>
         </div>

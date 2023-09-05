@@ -26,19 +26,20 @@ namespace FamilyExperienceApp.Controllers
                 ImageCarousels = _context.ImageCarousels.Take(15).ToList(),
 
                 WinterProducts = _context.Products
-                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != false))
+                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != null))
                                     .Where(x => x.Season == true).Take(8).ToList(),
 
                 SummerProducts = _context.Products
-                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != false))
+                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != null))
                                     .Where(x => x.Season == false).Take(8).ToList(),
 
                 SpringAutumnProducts = _context.Products
-                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != false))
+                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != null))
                                     .Where(x => x.Season == null).Take(8).ToList(),
 
                 Products = _context.Products
-                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != false)).Take(8).ToList()
+                                    .Include(x => x.ProductImages.Where(x => x.PosterStatus != null))
+                                    .Take(8).ToList()
             };
 
             return View(model);

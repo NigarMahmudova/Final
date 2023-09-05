@@ -1,5 +1,6 @@
 using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
+using FamilyExperienceApp.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,11 +15,27 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(15);
 }).AddDefaultTokenProviders().AddEntityFrameworkStores<FamilyExperienceDbContext>();
 
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.Events.OnRedirectToAccessDenied = options.Events.OnRedirectToLogin = context =>
+    {
+        var uri = new Uri(context.RedirectUri);
+
+        if (context.HttpContext.Request.Path.Value.StartsWith("/manage"))
+            context.Response.Redirect("/manage/account/login" + uri.Query);
+        else
+            context.Response.Redirect("/account/login" + uri.Query);
+
+        return Task.CompletedTask;
+    };
+});
+
 builder.Services.AddDbContext<FamilyExperienceDbContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
 });
 
+builder.Services.AddScoped<LayoutService>();
 
 var app = builder.Build();
 
