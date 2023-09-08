@@ -56,3 +56,26 @@ $(document).on("click", "#basket-remove-btn", function (e) {
         $(".notification").html(data)
     })
 })
+
+
+
+//document.getElementById("submitBtn").addEventListener("click", function (event) {
+//    event.preventDefault(); // Formun otomatik olarak gönderilmesini engelliyoruz
+
+//    var productId = document.getElementById("productId").value;
+//    var sizeId = document.getElementById("sizeId").value;
+
+//    // Fetch isteği gönderiyoruz
+//    fetch("/ProductController/AddToBasket?id=" + productId + "&sizeId=" + sizeId, {
+//        method: "POST",
+//        headers: {
+//            "Content-Type": "application/json"
+//        },
+//    })
+//        .then(response => {
+//            alert("Okey");
+//        })
+//        .catch(error => {
+//            alert("Not Okey");
+//        });
+//});

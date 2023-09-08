@@ -89,11 +89,127 @@ namespace FamilyExperienceApp.Controllers
             return returnUrl == null ? RedirectToAction("index", "home") : Redirect(returnUrl);
         }
 
+        [Authorize(Roles = "Member")]
+        public async Task<IActionResult> Profile(string tab = "Profile")
+        {
+            ViewBag.Tab = tab;
+            AppUser member = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            ProfileVM vm = new ProfileVM
+            {
+                Member = new MemberUpdateVM
+                {
+                    FullName = member.FullName,
+                    Email = member.Email,
+                    Phone = member.PhoneNumber,
+                    UserName = member.UserName,
+                },
+            };
+            return View(vm);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Member")]
+        public async Task<IActionResult> MemberUpdate(MemberUpdateVM memberVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                ProfileVM vm = new ProfileVM { Member = memberVM };
+                return View("Profile", vm);
+            }
+
+            AppUser member = await _userManager.FindByNameAsync(User.Identity.Name);
+
+            member.FullName = memberVM.FullName;
+            member.Email = memberVM.Email;
+            member.PhoneNumber = memberVM.Phone;
+            member.UserName = memberVM.UserName;
+
+            var result = await _userManager.UpdateAsync(member);
+
+            if (!result.Succeeded)
+            {
+                foreach (var err in result.Errors) ModelState.AddModelError("", err.Description);
+                ProfileVM vm = new ProfileVM { Member = memberVM };
+                return View("Profile", vm);
+            }
+
+            if (memberVM.NewPassword != null)
+            {
+                if (memberVM.CurrentPassword == null)
+                {
+                    ModelState.AddModelError("CurrentPassword", "CurrentPassword must be required!");
+                    ProfileVM model = new ProfileVM { Member = memberVM };
+                    return View("Profile", model);
+                }
+
+                await _userManager.ChangePasswordAsync(member, memberVM.CurrentPassword, memberVM.NewPassword);
+                ProfileVM vm = new ProfileVM { Member = memberVM };
+            }
+
+            await _signInManager.SignInAsync(member, false);
+
+            return RedirectToAction("profile");
+        }
 
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("index", "home");
+        }
+
+
+
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string email)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(email);
+
+            if (user == null) return View("Error");
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var url = Url.Action("verifytoken", "account", new { email = email, token = token }, Request.Scheme);
+
+            return Json(new
+            {
+                url = url
+            });
+        }
+
+        public async Task<IActionResult> VerifyToken(string email, string token)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(email);
+
+            if (await _userManager.VerifyUserTokenAsync(user, _userManager.Options.Tokens.PasswordResetTokenProvider, "ResetPassword", token))
+            {
+                TempData["Email"] = email;
+                TempData["Token"] = token;
+                return RedirectToAction("ResetPassword");
+            }
+
+            return View("Error");
+        }
+
+        public IActionResult ResetPassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
+        {
+            AppUser user = await _userManager.FindByEmailAsync(resetPassword.Email);
+
+            var result = await _userManager.ResetPasswordAsync(user, resetPassword.Token, resetPassword.Password);
+
+            if (!result.Succeeded)
+                return View("Error");
+
+            return RedirectToAction("login");
         }
     }
 }

@@ -8,6 +8,7 @@
         <div id="quick-view-content">
             <div class="row">
 
+
                 <div class="col-lg-6">
                     <div class="single-img">
                         <img height="480px" src="~/manage/uploads/products/@Model.ProductImages.FirstOrDefault(x=>x.PosterStatus==true)?.ImageName"
@@ -63,34 +64,41 @@
                             </a>
                         </div>
 
-                        <!-- size -->
-                        <div class="MiddleList" style="margin-top: 0px;">
-                            <div id="divUrunEkSecenek" class="Formline BorderNone">
-                                <div class="eksecenekLine selectvaryasyon">
-                                    <span class="right_line">
-                                        <select name="ddlEkSecenek0" class="eksecenekSelect">
-                                            <option value="-1">Select</option>
-                                            @foreach(var item in Model.ProductSizes)
-                                            {
-                                                <option tipid="2" value="@item.SizeId">@item.Size.Name</option>
-                                            }
-                                        </select>
-                                    </span>
+                        <form asp-action="addtobasket" asp-controller="product" asp-route-id="@Model.Id" method="post">
+                            <!-- size -->
+                            <div class="MiddleList" style="margin-top: 0px;">
+                                @if (Model.StockStatus)
+                                {
+                                    <div id="divUrunEkSecenek" class="Formline BorderNone">
+                                        <div class="eksecenekLine selectvaryasyon">
+                                            <span class="right_line">
+                                                <select id="sizeId" name="sizeId" class="eksecenekSelect">
+                                                    @foreach (var item in Model.ProductSizes)
+                                                    {
+                                                        <option value="@item.Size.Id">@item.Size.Name</option>
+                                                    }
+                                                </select>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="productId" name="id" value="@Model.Id" />
+                                }
+                                else
+                                {
+                                    <div id="divStokYok">
+                                        Item is out of stock.
+                                    </div>
+                                }
+
+                                <div class="buybutton" id="divSatinAl">
+                                    <button name="add-to-cart" id="basketSubmitBtn" class="js_add_to_cart button alt wp-element-button">
+                                        Add to cart
+                                    </button>
                                 </div>
                             </div>
-                            <div id="divStokYok" style="display: none;">
-                                Item is out of stock.
-                            </div>
-                            <div class="buybutton" id="divSatinAl">
-                                <a asp-controller="product" asp-action="addtobasket"  asp-route-id="@Model.Id" asp-route-size="" name="add-to-cart" value="246"
-                                   class="js_add_to_cart button alt wp-element-button basket-add-btn">
-                                    Add to
-                                    cart
-                                </a>
-                            </div>
-                        </div>
+                            </form>
 
-                        <a class="quick-view-shortcode" href="detail.html" target="_self">
+                        <a class="quick-view-shortcode" asp-action="detail" asp-controller="product" asp-route-id="@Model.Id" target="_self">
                             <span class="qodef-m-text">View More</span>
                         </a>
                     </div>

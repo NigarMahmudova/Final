@@ -216,6 +216,9 @@ namespace FamilyExperienceApp.Migrations
                     b.Property<int>("Order")
                         .HasColumnType("int");
 
+                    b.Property<byte>("Rate")
+                        .HasColumnType("tinyint");
+
                     b.Property<decimal>("SalePrice")
                         .HasColumnType("decimal(18,2)");
 
@@ -258,6 +261,39 @@ namespace FamilyExperienceApp.Migrations
                     b.HasIndex("ProductId");
 
                     b.ToTable("ProductImages");
+                });
+
+            modelBuilder.Entity("FamilyExperienceApp.Entities.ProductReview", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<byte>("Rate")
+                        .HasColumnType("tinyint");
+
+                    b.Property<string>("Text")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ProductReviews");
                 });
 
             modelBuilder.Entity("FamilyExperienceApp.Entities.ProductSize", b =>
@@ -342,6 +378,32 @@ namespace FamilyExperienceApp.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("FamilyExperienceApp.Entities.WishlistItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("WishlistItems");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -568,7 +630,7 @@ namespace FamilyExperienceApp.Migrations
                         .HasForeignKey("AppUserId");
 
                     b.HasOne("FamilyExperienceApp.Entities.Product", "Product")
-                        .WithMany()
+                        .WithMany("BasketItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -616,6 +678,23 @@ namespace FamilyExperienceApp.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("FamilyExperienceApp.Entities.ProductReview", b =>
+                {
+                    b.HasOne("FamilyExperienceApp.Entities.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("FamilyExperienceApp.Entities.Product", "Product")
+                        .WithMany("ProductReviews")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("FamilyExperienceApp.Entities.ProductSize", b =>
                 {
                     b.HasOne("FamilyExperienceApp.Entities.Product", "Product")
@@ -633,6 +712,23 @@ namespace FamilyExperienceApp.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Size");
+                });
+
+            modelBuilder.Entity("FamilyExperienceApp.Entities.WishlistItem", b =>
+                {
+                    b.HasOne("FamilyExperienceApp.Entities.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId");
+
+                    b.HasOne("FamilyExperienceApp.Entities.Product", "Product")
+                        .WithMany("WishlistItems")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -698,9 +794,15 @@ namespace FamilyExperienceApp.Migrations
 
             modelBuilder.Entity("FamilyExperienceApp.Entities.Product", b =>
                 {
+                    b.Navigation("BasketItems");
+
                     b.Navigation("ProductImages");
 
+                    b.Navigation("ProductReviews");
+
                     b.Navigation("ProductSizes");
+
+                    b.Navigation("WishlistItems");
                 });
 #pragma warning restore 612, 618
         }

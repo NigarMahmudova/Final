@@ -28,6 +28,7 @@ namespace FamilyExperienceApp.Entities
         public bool IsDeleted { get; set; }
         public bool? Gender { get; set; }
         public bool? Season { get; set; }
+        public byte Rate { get; set; }
 
         public Category Category { get; set; }
         public Color Color { get; set; }
@@ -51,5 +52,8 @@ namespace FamilyExperienceApp.Entities
 
         public List<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
         public List<ProductSize> ProductSizes { get; set; } = new List<ProductSize>();
+        public List<ProductReview> ProductReviews { get; set; }
+        public List<BasketItem> BasketItems { get; set; }
+        public List<WishlistItem> WishlistItems { get; set; }
     }
 }

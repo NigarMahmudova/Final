@@ -23,7 +23,7 @@
                         <div class="fx-add-to-wishlist">
 
                             <div class="fx-add-button">
-                                <a href="index626b.html?add_to_wishlist=237&amp;_wpnonce=19fbfce4e3"
+                                <a asp-action="addtowishlist" asp-controller="product" asp-route-id="@item.Id"
                                class="add_to_wishlist single_add_to_wishlist"
                                data-product-id="237"
                                data-product-type="simple"
@@ -41,14 +41,14 @@
                             View
                         </a>
                     </div>
-                    <a href="detail.html"
+                    <a asp-action="detail" asp-controller="product" asp-route-id="@item.Id"
                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
                 </div>
                 <div class="fx-product-content d-flex">
                     <h6 itemprop="name"
                     class="fx-product-title entry-title">
                         <a itemprop="url" class="fx-product-title-link"
-                       href="detail.html">
+                       asp-action="detail" asp-controller="product" asp-route-id="@item.Id">
                             @item.Name
                         </a>
                     </h6>

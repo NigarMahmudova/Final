@@ -26,29 +26,10 @@ for(let tab of tabs){
     }
 }
 
-let product_tabs = document.querySelectorAll('.tabs li');
 
-for (let tab of tabs) {
-    tab.onclick = function (e) {
-        e.preventDefault();
-        let active = document.querySelector('.product-active');
 
-        active.classList.remove('product-active');
-        this.classList.add('product-active');
 
-        let data_id = this.getAttribute('data-id');
-        let contents = document.querySelectorAll('.fx-Tabs-panel');
 
-        for (let content of contents) {
-            if (content.id === data_id) {
-                content.classList.remove('d-none');
-            }
-            else {
-                content.classList.add('d-none');
-            }
-        }
-    }
-}
 
 
 // Add to cart

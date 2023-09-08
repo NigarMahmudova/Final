@@ -1,5 +1,10 @@
 ﻿@model HomeVM
 
+@section Css{
+    <link rel="stylesheet" href="~/./assets/css/slider.css" />
+    <link rel="stylesheet" href="~/./assets/css/carousel.css" />
+}
+
 <!-- Main section start -->
     <div id="fx-page-outer">
         <div id="fx-home-page-inner" class="fx-content-full-width">
@@ -460,3 +465,91 @@
 <div id="quick-view-modal" class="">
 
 </div>
+
+@section Scripts{
+    <script>
+        // Main Slider
+        $(document).ready(function () {
+            var time = 2;
+            var $bar,
+                $slick,
+                isPause,
+                tick,
+                percentTime;
+
+            $slick = $('.slider');
+            $slick.slick({
+                arrows: true,
+                speed: 1200,
+                adaptiveHeight: false
+            });
+
+            $bar = $('.slider-progress .progress');
+
+            function startProgressbar() {
+                resetProgressbar();
+                percentTime = 0;
+                isPause = false;
+                tick = setInterval(interval, 30);
+            }
+
+            function interval() {
+                if (isPause === false) {
+                    percentTime += 1 / (time + 0.1);
+                    $bar.css({
+                        width: percentTime + "%"
+                    });
+                    if (percentTime >= 100) {
+                        $slick.slick('slickNext');
+                        startProgressbar();
+                    }
+                }
+            }
+
+            function resetProgressbar() {
+                $bar.css({
+                    width: 0 + '%'
+                });
+                clearTimeout(tick);
+            }
+
+            startProgressbar();
+
+            $('.slick-next, .slick-prev').click(function () {
+                startProgressbar();
+            });
+
+        });
+
+        // Carousel
+        jQuery(document).ready(function ($) {
+            $('.carousel-slider').slick({
+                dots: false,
+                infinite: true,
+                speed: 400,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                arrows: false,
+                responsive: [{
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 400,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+            });
+        });
+
+    </script>
+
+                    }

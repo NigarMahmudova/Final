@@ -23,6 +23,8 @@ namespace FamilyExperienceApp.DAL
         public DbSet<ProductSize> ProductSizes { get; set; }
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<BasketItem> BasketItems { get; set; }
+        public DbSet<WishlistItem> WishlistItems { get; set; }
+        public DbSet<ProductReview> ProductReviews { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
