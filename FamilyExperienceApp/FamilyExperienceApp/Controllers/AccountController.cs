@@ -5,6 +5,7 @@ using FamilyExperienceApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace FamilyExperienceApp.Controllers
@@ -115,6 +116,7 @@ namespace FamilyExperienceApp.Controllers
                     Phone = member.PhoneNumber,
                     UserName = member.UserName,
                 },
+                Orders = _context.Orders.Include(x => x.OrderItems).Where(x => x.AppUserId == member.Id).ToList()
             };
             return View(vm);
         }

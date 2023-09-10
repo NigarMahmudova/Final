@@ -34,3 +34,26 @@
 .product-border {
     border: 1px solid #000 !important;
 }
+
+
+.checkout-billing-details .checkout-billing-details-wrap textarea {
+    margin: 0 0 23px;
+    width: 100%;
+    vertical-align: top;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 13px;
+    font-weight: inherit;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    outline: 0;
+    padding: 14.5px 22px;
+    transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+    background-color: transparent;
+    border-color: #000;
+    color: #000;
+}

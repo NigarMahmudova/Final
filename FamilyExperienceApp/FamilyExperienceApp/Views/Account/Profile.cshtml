@@ -50,14 +50,18 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
+                                                        @foreach (var item in Model.Orders)
+                                                        {
+                                                            dataOrder++;
                                                             <tr>
-                                                                <td>1</td>
-                                                                <td>28 Aug, 2023</td>
-                                                                <td>Pending</td>
-                                                                <td>5</td>
-                                                                <td>459 AZN</td>
-                                                                <td><a href="#" class="btn ">View</a></td>
+                                                                <td>@dataOrder</td>
+                                                                <td>@item.CreatedAt.ToString("dd MMMM, yyyy")</td>
+                                                                <td>@item.Status</td>
+                                                                <td>@item.OrderItems.Count</td>
+                                                                <td>$@item.TotalAmount</td>
+                                                                <td><a href="cart.html" class="btn ">View</a></td>
                                                             </tr>
+                                                        }
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -81,7 +85,7 @@
     <script>
         let product_tabs = document.querySelectorAll('.tabs li');
 
-        for (let tab of tabs) {
+        for (let tab of product_tabs) {
             tab.onclick = function (e) {
                 e.preventDefault();
                 let active = document.querySelector('.active');

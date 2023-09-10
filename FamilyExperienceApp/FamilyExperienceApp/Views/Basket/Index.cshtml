@@ -95,7 +95,7 @@
                                                 <td class="product-price" data-title="Price">
                                                     <span class="woocommerce-Price-amount amount">
                                                         <bdi>
-                                                            <span class="woocommerce-Price-currencySymbol">$</span>@(item.Product.DiscountedPrice > 0 ? item.Product.DiscountedPrice : item.Product.SalePrice)
+                                                            <span class="woocommerce-Price-currencySymbol">₼</span>@(item.Product.DiscountedPrice > 0 ? item.Product.DiscountedPrice : item.Product.SalePrice)
                                                         </bdi>
                                                     </span>
                                                 </td>
@@ -112,7 +112,7 @@
                                                 <td class="product-subtotal" data-title="Subtotal">
                                                     <span class="woocommerce-Price-amount amount">
                                                         <bdi>
-                                                            <span class="woocommerce-Price-currencySymbol">$</span>@(item.Count * (item.Product.DiscountedPrice > 0 ? item.Product.DiscountedPrice : item.Product.SalePrice))
+                                                            <span class="woocommerce-Price-currencySymbol">₼</span>@(item.Count * (item.Product.DiscountedPrice > 0 ? item.Product.DiscountedPrice : item.Product.SalePrice))
                                                         </bdi>
                                                     </span>
                                                 </td>
@@ -168,7 +168,7 @@
 
                                                 <th>Total Count</th>
                                                 <td data-title="Subtotal">
-                                                    <span id="total-count" class="woocommerce-Price-amount amount"></span>
+                                                    <span id="total-count" class="woocommerce-Price-amount amount">@Model.Items.Count</span>
                                                 </td>
                                             </tr>
 
@@ -206,7 +206,7 @@
                                                     <strong>
                                                         <span class="woocommerce-Price-amount amount">
                                                             <bdi id="total">
-                                                                <span class="woocommerce-Price-currencySymbol">$</span>@Model.TotalAmount
+                                                                <span class="woocommerce-Price-currencySymbol">₼</span>@Model.TotalAmount
                                                             </bdi>
                                                         </span>
                                                     </strong>
@@ -219,19 +219,19 @@
 
                                     <div class="fx-proceed-to-checkout">
 
-                                        <a href="checkout.html"
+                                        <a asp-action="checkout" asp-controller="order"
                                        class="checkout-button button">
                                             Proceed to checkout
                                         </a>
                                     </div>
 
-                                    <div id="btn-clear" class="fx-proceed-to-checkout" style="float: right;">
+                                    @*<div id="btn-clear" class="fx-proceed-to-checkout" style="float: right;">
 
-                                        <a href="#"
+                                        <a asp-controller="order" asp-action="_clearBasket" asp-route-id="userId"
                                        class="checkout-button button">
                                             Delete All
                                         </a>
-                                    </div>
+                                    </div>*@
 
                                 </div>
                             </div>
