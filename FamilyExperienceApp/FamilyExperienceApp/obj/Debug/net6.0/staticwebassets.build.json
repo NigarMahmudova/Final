@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/LCjBY5VgBtIfPs3hkhUxe08nq+vTT8XRy5rJTZ677s=",
+  "Hash": "aDaWsEBdqWol7jrvWzczt5SDQjYpm1pWcAH4mgp8Kbs=",
   "Source": "FamilyExperienceApp",
   "BasePath": "_content/FamilyExperienceApp",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\_wishlist.scss"
+    },
+    {
+      "Identity": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\addition.css",
+      "SourceId": "FamilyExperienceApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\",
+      "BasePath": "_content/FamilyExperienceApp",
+      "RelativePath": "assets/css/addition.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\css\\addition.css"
     },
     {
       "Identity": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\assets\\css\\bootstrap.css",

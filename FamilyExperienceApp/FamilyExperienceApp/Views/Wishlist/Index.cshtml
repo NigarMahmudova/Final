@@ -8,15 +8,28 @@
     
 
     <!-- Main section start -->
-    <div id="fx-page-outer">
+    <div id="fx-page-outer" style="margin-top: -95px">
+        
         <div id="fx-page-inner" class="fx-content-full-width">
             <main id="fx-page-content">
                 <div class="fx-grid-inner">
                 @if(Model.Count == 0)
                 {
-                    <div class="empty-wishlist">
-                        <p class="cart-empty fx-info">No products added to the wishlist.</p>
-                        <p class="return-to-shop">
+                    <div class="fx-page-title" style="background-color: #e9e9e9; margin-bottom:94px">
+                        <div class="fx-m-inner">
+                            <div itemprop="breadcrumb" class="fx-breadcrumbs">
+                                <a itemprop="url" class="qodef-breadcrumbs-link" href="#">
+                                    <span itemprop="title">Home</span>
+                                </a>
+                                <span class="fx-breadcrumbs-separator">|</span>
+                                <span itemprop="title" class="fx-breadcrumbs-current">Wishlist</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empty-wishlist" >
+                        <p class="cart-empty fx-info d-flex align-items-center justify-content-center" style="font-weight: 400; color: #000;
+                        font-size: 35px;line-height: 1.2em;margin: 0;">No products added to the wishlist.</p>
+                        <p class="return-to-shop" style="margin: 20px 0 0;text-align: center;">
                             <a class="button fx-backward" href="shop.html">
                                 Return to shop
                             </a>
@@ -70,7 +83,7 @@
                                         <tr id="yith-wcwl-row-256" data-row-id="256">
                                             <td class="product-remove">
                                                 <div>
-                                                    <a asp-action="RemoveFromWishlist" asp-controller="product" asp-route-id="@item.Id">
+                                                    <a asp-action="RemoveFromWishlist" asp-controller="wishlist" asp-route-id="@item.ProductId">
                                                         <i class="fa-regular fa-x"></i>
                                                     </a>
                                                 </div>

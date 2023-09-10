@@ -620,6 +620,9 @@ namespace FamilyExperienceApp.Migrations
                     b.Property<bool>("IsAdmin")
                         .HasColumnType("bit");
 
+                    b.Property<int>("MailConfirmCode")
+                        .HasColumnType("int");
+
                     b.HasDiscriminator().HasValue("AppUser");
                 });
 

@@ -24,6 +24,7 @@
 
     
     @RenderSection("Css",required:false)
+    <link rel="stylesheet" href="~/./assets/css/addition.css" />
     <link rel="stylesheet" href="~/./assets/css/style.css" />
 </head>
 
@@ -441,14 +442,8 @@
 
     
 
-    <script src="~/./assets/js/app.js"></script>
     <script src="~/./assets/js/main.js"></script>
-    <script>
-        document.getElementById("basketSubmitBtn").onclick = (e) => {
-            e.preventDefault()
-            alert("okeyem")
-        }
-    </script>
+
     <!-- <script src="./assets/js/basket.js"></script> -->
     @RenderSection("Scripts",required:false)
 </body>

@@ -1,0 +1,36 @@
+﻿.empty-wishlist .return-to-shop a {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.417em;
+    letter-spacing: 0.1em;
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    width: auto;
+    margin: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0;
+    outline: 0;
+    transition: color 0.25s ease-out, background-color 0.25s ease-out, border-color 0.25s ease-out;
+    padding: 9px 44px;
+    cursor: pointer;
+    z-index: 3;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid transparent;
+}
+#fx-page-inner .empty-wishlist .return-to-shop a:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+}
+
+.fx-category-filter .fx-category-list a {
+    padding: 2px 5px 2px 2px !important;
+}
+
+.product-border {
+    border: 1px solid #000 !important;
+}

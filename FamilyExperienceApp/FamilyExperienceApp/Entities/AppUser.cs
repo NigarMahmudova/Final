@@ -6,5 +6,6 @@ namespace FamilyExperienceApp.Entities
     {
         public string FullName { get; set; }
         public bool IsAdmin { get; set; }
+        public int MailConfirmCode { get; set; }
     }
 }

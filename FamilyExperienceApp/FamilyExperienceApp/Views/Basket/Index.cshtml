@@ -1,6 +1,10 @@
 ﻿@model BasketVM
 
-
+@section Css{
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    }
 
     <!-- Main section start -->
     <div id="fx-page-outer" style="margin-top: 0">
@@ -8,7 +12,7 @@
         <div class="fx-page-title" style="background-color: #e9e9e9;">
             <div class="fx-m-inner">
                 <div itemprop="breadcrumb" class="fx-breadcrumbs">
-                    <a itemprop="url" class="qodef-breadcrumbs-link" href="https://corsen.qodeinteractive.com/">
+                    <a itemprop="url" class="qodef-breadcrumbs-link" href="#">
                         <span itemprop="title">Home</span></a>
                     <span class="fx-breadcrumbs-separator">|</span>
                     <span itemprop="title" class="fx-breadcrumbs-current">Cart</span>
@@ -46,14 +50,12 @@
                                         <tr>
                                             <th class="product-remove">
                                                 <span class="screen-reader-text">
-                                                    Remove
-                                                    item
+                                                    Remove item
                                                 </span>
                                             </th>
                                             <th class="product-thumbnail">
                                                 <span class="screen-reader-text">
-                                                    Thumbnail
-                                                    image
+                                                    Thumbnail image
                                                 </span>
                                             </th>
                                             <th class="product-name">Product</th>
@@ -70,7 +72,7 @@
                                             <tr class="fx-cart-form__cart-item cart_item">
 
                                                 <td class="product-remove" style="cursor: pointer">
-                                                    <a id="basket-remove-btn" asp-action="removefrombasket" asp-controller="product" asp-route-id="@item.Product.Id">
+                                                    <a asp-action="removefrombasket" asp-controller="basket" asp-route-id="@item.Product.Id">
                                                         <i class="fa-regular fa-x"></i>
                                                     </a>
                                                 </td>
@@ -204,7 +206,7 @@
                                                     <strong>
                                                         <span class="woocommerce-Price-amount amount">
                                                             <bdi id="total">
-                                                                <span class="woocommerce-Price-currencySymbol">$</span>$@Model.TotalAmount
+                                                                <span class="woocommerce-Price-currencySymbol">$</span>@Model.TotalAmount
                                                             </bdi>
                                                         </span>
                                                     </strong>

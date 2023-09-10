@@ -25,57 +25,38 @@ $(document).on("click", "#quick-view-close", function (e) {
 })
 
 
-//$(document).on("click", ".basket-add-btn", function (e) {
-//    e.preventDefault();
-//    let url = $(this).attr("href");
-//    fetch(url).then(response => {
-//        if (!response.ok) {
-//            alert("Xeta bas verdi")
-//        }
-//        else return response.text()
-//    }).then(data => {
-//        $("#basketCart").html(data)
-//    }).then(() => {
-//        var data = $(".minicart-inner").attr("data-count");
-//        $(".notification").html(data)
-//    })
-//})
-
-$(document).on("click", "#basket-remove-btn", function (e) {
+$(document).on("click", "#basketSubmitBtn", function (e) {
     e.preventDefault();
-    let url = $(this).attr("href");
-    fetch(url).then(response => {
-        if (!response.ok) {
-            alert("Xeta bas verdi")
-        }
-        else return response.text()
-    }).then(data => {
-        $("#basketCart").html(data)
-    }).then(() => {
-        var data = $(".minicart-inner").attr("data-count");
-        $(".notification").html(data)
+    var productId = document.getElementById("productId").value;
+    var sizeId = document.getElementById("sizeId").value;
+    fetch("/Product/AddToBasket?id=" + productId + "&sizeId=" + sizeId, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
     })
+        .then(response => {
+            let modal = document.querySelector('#quick-view-modal');
+            modal.classList.remove('open');
+        })
+        .catch(error => {
+        });
+
 })
 
+$(document).on("click", "#wishlistSubmitBtn", function (e) {
+    e.preventDefault();
+    var ws_productId = document.getElementById("ws_productId").value;
+    fetch("/Product/AddToWishlist?id=" + ws_productId, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+    })
+        .then(response => {
+            alert("Elave edildi");
+        })
+        .catch(error => {
+        });
 
-
-//document.getElementById("submitBtn").addEventListener("click", function (event) {
-//    event.preventDefault(); // Formun otomatik olarak gönderilmesini engelliyoruz
-
-//    var productId = document.getElementById("productId").value;
-//    var sizeId = document.getElementById("sizeId").value;
-
-//    // Fetch isteği gönderiyoruz
-//    fetch("/ProductController/AddToBasket?id=" + productId + "&sizeId=" + sizeId, {
-//        method: "POST",
-//        headers: {
-//            "Content-Type": "application/json"
-//        },
-//    })
-//        .then(response => {
-//            alert("Okey");
-//        })
-//        .catch(error => {
-//            alert("Not Okey");
-//        });
-//});
+})

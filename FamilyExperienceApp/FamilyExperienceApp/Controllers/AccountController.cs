@@ -1,5 +1,6 @@
 ﻿using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
+using FamilyExperienceApp.Mail;
 using FamilyExperienceApp.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -13,12 +14,14 @@ namespace FamilyExperienceApp.Controllers
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
         private readonly FamilyExperienceDbContext _context;
+        private readonly IMailService _mailService;
 
-        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, FamilyExperienceDbContext context)
+        public AccountController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, FamilyExperienceDbContext context, IMailService mailService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _context = context;
+            _mailService = mailService;
         }
 
         public IActionResult Register()
@@ -52,6 +55,14 @@ namespace FamilyExperienceApp.Controllers
 
             await _userManager.AddToRoleAsync(user, "Member");
 
+            var code = new Random().Next(1000,9999);
+            user.MailConfirmCode=code;
+            await _mailService.SendEmailAsync(new MailRequest()
+            {
+                ToEmail= memberVM.Email,    
+                Subject= "Mail Confirmation",
+                Body=$"<h1>Salam hormetli istifadeci,<h1/><p>{code}<p/>"
+            });
             return RedirectToAction("Login");
         }
 

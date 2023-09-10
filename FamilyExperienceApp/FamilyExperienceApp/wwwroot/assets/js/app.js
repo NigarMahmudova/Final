@@ -1,16 +1,15 @@
 
 
-// Details page tabmenu
 
 let tabs = document.querySelectorAll('.tabs li');
 
 for(let tab of tabs){
     tab.onclick = function(e){
         e.preventDefault();
-        let active = document.querySelector('.active');
+        let active = document.querySelector('.product-active');
         
-        active.classList.remove('active');
-        this.classList.add('active');
+        active.classList.remove('product-active');
+        this.classList.add('product-active');
 
         let data_id = this.getAttribute('data-id');
         let contents = document.querySelectorAll('.fx-Tabs-panel');
@@ -26,9 +25,17 @@ for(let tab of tabs){
     }
 }
 
+let borders = document.querySelectorAll('.tabs li a');
 
+for (let border of borders) {
+    border.onclick = function (e) {
+        e.preventDefault();
+        let pr_border = document.querySelector('.product-border');
 
-
+        pr_border.classList.remove('product-border');
+        this.classList.add('product-border');
+    }
+}
 
 
 

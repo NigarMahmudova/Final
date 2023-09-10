@@ -265,7 +265,7 @@
                                     
                                     @if (User.Identity.IsAuthenticated && Model.Product.ProductReviews.Any(x => x.AppUserId == User.FindFirst(ClaimTypes.NameIdentifier).Value))
                                     {
-                                        <h3 class="text-danger">You have already written review here!</h3>
+                                        <h3 style="padding: 10px; color: #fff; background-color:#000; font-style: italic; font-size:15px">You have already written review here!</h3>
                                     }
                                     else
                                     {
@@ -359,5 +359,31 @@
 @section Scripts{
     <script src="~/./assets/js/plugins.js"></script>
     <script src="~/./assets/js/active.js"></script>
+
+    <script>
+        let tabs = document.querySelectorAll('.tabs li');
+
+        for (let tab of tabs) {
+            tab.onclick = function (e) {
+                e.preventDefault();
+                let active = document.querySelector('.active');
+
+                active.classList.remove('active');
+                this.classList.add('active');
+
+                let data_id = this.getAttribute('data-id');
+                let contents = document.querySelectorAll('.fx-Tabs-panel');
+
+                for (let content of contents) {
+                    if (content.id === data_id) {
+                        content.classList.remove('d-none');
+                    }
+                    else {
+                        content.classList.add('d-none');
+                    }
+                }
+            }
+        }
+    </script>
 
                     }

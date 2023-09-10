@@ -1,5 +1,6 @@
 using FamilyExperienceApp.DAL;
 using FamilyExperienceApp.Entities;
+using FamilyExperienceApp.Mail;
 using FamilyExperienceApp.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +37,9 @@ builder.Services.AddDbContext<FamilyExperienceDbContext>(opt =>
 });
 
 builder.Services.AddScoped<LayoutService>();
+builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddTransient<IMailService, MailService>();
+
 
 var app = builder.Build();
 
