@@ -38,11 +38,13 @@ $(document).on("click", "#basketSubmitBtn", function (e) {
         .then(response => {
             let modal = document.querySelector('#quick-view-modal');
             modal.classList.remove('open');
+        //    location.reload()
         })
         .catch(error => {
         });
 
 })
+
 
 $(document).on("click", "#wishlistSubmitBtn", function (e) {
     e.preventDefault();

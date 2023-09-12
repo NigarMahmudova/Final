@@ -92,43 +92,51 @@
                                             </div>
             
                                             <!-- size -->
-                                            <div class="MiddleList" style="margin-top: 0px;">
-                                            @if (Model.Product.StockStatus)
-                                            {
-                                                <div id="divUrunEkSecenek" class="Formline BorderNone">
-                                                    <div class="eksecenekLine selectvaryasyon">
-                                                        <span class="right_line">
-                                                            <select name="ddlEkSecenek0" class="eksecenekSelect">
-                                                                <option value="-1">Select</option>
-                                                                @foreach (var item in Model.Product.ProductSizes)
-                                                                {
-                                                                    <option tipid="2" value="@item.SizeId">@item.Size.Name</option>
-
-                                                                }
-
-                                                            </select>
-                                                        </span>
+                                        <form asp-action="addtobasket" asp-controller="product" asp-route-id="@Model.Product.Id" style="margin-top:35px" method="post">
+                                            <!-- size -->
+                                            <div class="MiddleList" style="margin-top: 0px; width:100%">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        @if (Model.Product.StockStatus)
+                                                        {
+                                                            <div id="divUrunEkSecenek" class="Formline BorderNone">
+                                                                <div class="eksecenekLine selectvaryasyon">
+                                                                    <span class="right_line">
+                                                                        <select id="sizeId" name="sizeId" class="eksecenekSelect">
+                                                                            @foreach (var item in Model.Product.ProductSizes)
+                                                                            {
+                                                                                <option value="@item.Size.Id">@item.Size.Name</option>
+                                                                            }
+                                                                        </select>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <input type="hidden" id="productId" name="id" value="@Model.Product.Id" />
+                                                        }
+                                                        else
+                                                        {
+                                                            <div id="divStokYok">
+                                                                Item is out of stock.
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="buybutton" id="divSatinAl">
+                                                            <button style="margin-top: 0" name="add-to-cart" id="basketSubmitBtn" class="js_add_to_cart button alt wp-element-button">
+                                                                Add to cart
+                                                            </button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            }
-                                            else
-                                            {
-                                                <div id="divStokYok" >
-                                                    Item is out of stock.
-                                                </div>
-                                            }
+                                                
 
                                                 
-                                                <div class="buybutton" id="divSatinAl">
-                                                <a asp-controller="product" asp-action="addtobasket" asp-route-id="@Model.Product.Id" asp-route-size="" name="add-to-cart"
-                                                        class="js_add_to_cart button alt wp-element-button">Add to
-                                                        cart</a>
-                                                </div>
                                             </div>
+                                        </form>
             
                                         </div>
 
-                                        <div class="fx-add-to-wishlist add-to-wishlist-757">
+                                        <div class="fx-add-to-wishlist add-to-wishlist-757" style="margin:0 !important">
                                             <div class="fx-add-button">
                                                 <a href="indexf963.html?add_to_wishlist=757&amp;_wpnonce=19fbfce4e3"
                                                     class="add_to_wishlist single_add_to_wishlist">

@@ -57,3 +57,190 @@
     border-color: #000;
     color: #000;
 }
+
+.price-range-wrap {
+    padding-top: 8px;
+}
+
+    .price-range-wrap .price-range {
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+
+        .price-range-wrap .price-range.ui-widget-content {
+            border: none;
+            background: #c2c2c2;
+            height: 1px;
+            box-shadow: none;
+            position:relative;
+        }
+
+            .price-range-wrap .price-range.ui-widget-content .ui-slider-range {
+                background-color: #000;
+                border-radius: 0;
+            }
+
+            .price-range-wrap .price-range.ui-widget-content .ui-slider-handle {
+                border: 1px solid #000;
+                background-color: #fff;
+                outline: none;
+                top: -5px;
+                cursor: ew-resize;
+                border-radius: 50%;
+                width: 10px !important;
+                height: 10px !important;
+                position:absolute
+            }
+
+    .price-range-wrap .range-slider {
+        color: #333333;
+        margin-top: 22px;
+    }
+
+        .price-range-wrap .range-slider .price-input label {
+            color: #333333;
+            margin-bottom: 0;
+        }
+
+        .price-range-wrap .range-slider .price-input input {
+            color: #666666;
+            border: none;
+            outline: none;
+            pointer-events: none;
+        }
+
+        .price-range-wrap .range-slider button.filter-btn {
+            border: none;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            line-height: 36px;
+            padding: 0 15px;
+            border-radius: 3px;
+            background-color: #000;
+            float: right;
+        }
+
+.top-bar-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 19px;
+    color: #030303;
+}
+
+@media only screen and (max-width: 479.98px) {
+    .top-bar-right {
+        display: block;
+        text-align: center;
+    }
+}
+
+.top-bar-right .product-short {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 479.98px) {
+    .top-bar-right .product-short {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+}
+
+.top-bar-right .product-short p {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 575.98px) {
+    .top-bar-right .product-short p {
+        font-size: 14px;
+    }
+}
+
+.top-bar-right .product-amount p {
+    color: #666666;
+    text-transform: capitalize;
+}
+
+@media only screen and (max-width: 575.98px) {
+    .top-bar-right .product-amount p {
+        font-size: 14px;
+    }
+}
+
+.nice-select {
+    width: 200px;
+    font-size: 16px;
+    padding: 0 10px;
+    margin-bottom: 1rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 19px;
+    color: #030303;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .nice-select {
+        width: 170px;
+    }
+}
+
+.nice-select.open {
+    border-color: #e3a51e;
+}
+
+.nice-select .list {
+    right: 0;
+    left: auto;
+    width: 100%;
+}
+
+.nice-select .option {
+    font-size: 13px;
+    line-height: 34px;
+    min-height: 34px;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 19px;
+    color: #030303;
+}
+
+.nice-select:after {
+    width: 8px;
+    height: 8px;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.sidebar-search {
+    margin: 40px 0 35px !important;
+}
+
+.season-select, .gender-select {
+    width: 100%;
+    border: 1px solid;
+    padding: 5px;
+}

@@ -62,5 +62,25 @@ namespace FamilyExperienceApp.Services
             }
             return basketVM;
         }
+
+
+        public WishlistVM GetWishlist()
+        {
+            var wishlistVM = new WishlistVM();
+
+            string userId = _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var dbItems = _context.WishlistItems.Include(x => x.Product).ThenInclude(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => x.AppUserId == userId).ToList();
+            foreach (var dbItem in dbItems)
+            {
+                WishlistItemVM item = new WishlistItemVM
+                {
+                    Count = dbItem.Count,
+                    Product = _context.Products.Include(x => x.ProductImages).FirstOrDefault(x => x.Id == dbItem.ProductId),
+                };
+                wishlistVM.Items.Add(item);
+            }
+
+            return wishlistVM;
+        }
     }
 }
