@@ -52,12 +52,8 @@
                         <textarea asp-for="Desc" class="form-control"></textarea>
                         <span class="text-danger" asp-validation-for="Desc"></span>
                     </div>
-                    <div class="form-group col-md-4">
-                        <label asp-for="Order">Order</label>
-                        <input asp-for="Order" class="form-control">
-                        <span class="text-danger" asp-validation-for="Order"></span>
-                    </div>
-                    <div class="form-group col-md-4">
+                    
+                    <div class="form-group col-md-6">
                         <label asp-for="Gender">Gender</label>
                         <Select asp-for="Gender" class="form-control">
                             <option value="@(true)">Men</option>
@@ -66,7 +62,7 @@
                         </Select>
                         <span class="text-danger" asp-validation-for="Gender"></span>
                      </div>
-                    <div class="form-group col-md-4">
+                    <div class="form-group col-md-6">
                         <label asp-for="Season">Season</label>
                         <Select asp-for="Season" class="form-control">
                             <option value="@(true)">Winter</option>

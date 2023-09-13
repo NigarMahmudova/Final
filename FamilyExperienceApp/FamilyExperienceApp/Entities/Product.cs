@@ -10,7 +10,6 @@ namespace FamilyExperienceApp.Entities
         public int Id { get; set; }
         public int CategoryId { get; set; }
         public int ColorId { get; set; }
-        public int Order { get; set; }
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }

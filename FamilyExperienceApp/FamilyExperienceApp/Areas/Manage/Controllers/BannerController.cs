@@ -4,6 +4,7 @@ using FamilyExperienceApp.Entities;
 using FamilyExperienceApp.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Data;
 
 namespace FamilyExperienceApp.Areas.Manage.Controllers
@@ -23,16 +24,13 @@ namespace FamilyExperienceApp.Areas.Manage.Controllers
 
         public IActionResult Index(int page = 1)
         {
-            //var query = _context.Sliders.AsQueryable();
-
-            //var vm = PaginatedList<Slider>.Create(query, page, 2);
-
-            //if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages });
-
-            //return View(vm);
-
             var query = _context.Banners.AsQueryable();
-            return View(PaginatedList<Banner>.Create(query, page, 4));
+
+            var vm = PaginatedList<Banner>.Create(query, page, 2);
+
+            if (page > vm.TotalPages) return RedirectToAction("Index", new { page = vm.TotalPages });
+
+            return View(vm);
         }
 
         public IActionResult Create()

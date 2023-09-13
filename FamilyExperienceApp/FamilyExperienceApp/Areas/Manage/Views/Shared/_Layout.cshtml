@@ -120,17 +120,17 @@
                                 <img src="~/../../manage/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="ti-user me-1 ms-1"></i>
-                                    My Profile
-                                </a>
-                                <a class="dropdown-item" href="javascript:void(0)">
+                                @if (!User.IsInRole("Member"))
+                                {
+                                    <a class="dropdown-item" href="javascript:void(0)">
+                                        <i class="ti-user me-1 ms-1"></i>
+                                        @User.Identity.Name
+                                    </a>
+                                }
+                                
+                                <a class="dropdown-item" asp-action="adminlogout" asp-controller="account">
                                     <i class="ti-wallet me-1 ms-1"></i>
-                                    My Balance
-                                </a>
-                                <a class="dropdown-item" href="javascript:void(0)">
-                                    <i class="ti-email me-1 ms-1"></i>
-                                    Inbox
+                                    Logout
                                 </a>
                             </ul>
                         </li>
@@ -199,10 +199,10 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-action="index" asp-controller="tag"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" asp-action="index" asp-controller="order"
                                aria-expanded="false">
                                 <i class="mdi mdi-border-none"></i>
-                                <span class="hide-menu">Tag</span>
+                                <span class="hide-menu">Order</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
@@ -246,11 +246,9 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
+        <div class="page-wrapper" style="min-height: 100vh">
             @RenderBody();
             <footer class="footer text-center">
-                All Rights Reserved by Nice admin. Designed and Developed by
-                <a href="https://www.wrappixel.com">WrapPixel</a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

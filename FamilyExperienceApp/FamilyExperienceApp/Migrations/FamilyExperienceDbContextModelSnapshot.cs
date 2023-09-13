@@ -308,9 +308,6 @@ namespace FamilyExperienceApp.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("Order")
-                        .HasColumnType("int");
-
                     b.Property<byte>("Rate")
                         .HasColumnType("tinyint");
 
