@@ -38,27 +38,31 @@ $(document).on("click", "#basketSubmitBtn", function (e) {
         .then(response => {
             let modal = document.querySelector('#quick-view-modal');
             modal.classList.remove('open');
-        //    location.reload()
+            location.reload();
+        //    return response.json();
         })
+        //.then(data => {
+        //    console.log(data.data);
+        //})
         .catch(error => {
         });
 
 })
 
 
-$(document).on("click", "#wishlistSubmitBtn", function (e) {
-    e.preventDefault();
-    var ws_productId = document.getElementById("ws_productId").value;
-    fetch("/Product/AddToWishlist?id=" + ws_productId, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-    })
-        .then(response => {
-            alert("Elave edildi");
-        })
-        .catch(error => {
-        });
+//$(document).on("click", "#wishlistSubmitBtn", function (e) {
+//    e.preventDefault();
+//    var ws_productId = document.getElementById("ws_productId").value;
+//    fetch("/Product/AddToWishlist?id=" + ws_productId, {
+//        method: "POST",
+//        headers: {
+//            "Content-Type": "application/json"
+//        },
+//    })
+//        .then(response => {
+//            alert("Elave edildi");
+//        })
+//        .catch(error => {
+//        });
 
-})
+//})

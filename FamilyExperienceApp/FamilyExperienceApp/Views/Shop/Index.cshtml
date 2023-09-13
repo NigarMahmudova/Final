@@ -131,11 +131,11 @@
                             <!-- Search -->
                             <div class="sidebar-single" data-area="shop-sidebar">
                                 <div class="sidebar-search">
-                                    <form role="search" method="get" action="https://corsen.qodeinteractive.com/">
+                                    <form role="search" method="get" action="">
                                         <label class="fx-product-search-label"></label>
                                         <div class="fx-product-search-fields">
-                                            <input type="search" id="fx-search-input" class="fx-product-search-field"
-                                                placeholder="Search" name="s" />
+                                            <input name="search" value="@ViewBag.Search" type="text" id="fx-search-input" class="fx-product-search-field"
+                                                placeholder="Search" />
                                             <button type="submit" class="fx-product-search-button">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="12.001" height="11.784"
                                                     viewBox="0 0 12.001 11.784">
@@ -382,6 +382,9 @@
     </div>
     <!-- Main section end -->
 
+    <div id="quick-view-modal" class="">
+
+    </div>
 
     @section Scripts{
         <script src="~/./assets/js/plugins.js"></script>

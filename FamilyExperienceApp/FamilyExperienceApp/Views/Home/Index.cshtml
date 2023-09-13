@@ -17,70 +17,22 @@
                                 <!-- START SLICK SLIDER -->
                                 <div class="slider-wrapper">
                                     <div class="slider responsive lazy">
+                                        @foreach(var item in Model.Sliders)
+                                        {
                                         <div class="slider-item-wrapper">
                                             <div class="slider-item">
                                                 <img class="slick-slider-img" alt="Alt"
-                                                    src="~/./assets/images/products/IMG_3183.JPG" />
-                                                <div class="slider-header"> Winter Essentials </div>
-                                                <div class="slider-desc">
-                                                    Artıq UCard-la dünyanın istənilən yanacaqdoldurma, kafe-restoran
-                                                    və
-                                                    marketlərində 5% keşbek qazanmaq üçün 200 AZN dövriyyə tələbi
-                                                    yoxdur! </div>
+                                                    src="~/manage/uploads/sliders/@item.ImageName" />
+                                                <div class="slider-header"> @item.Title </div>
+                                                <div class="slider-desc" style="color: #000; font-size: 22px; font-weight: 500; width: 30%">
+                                                    @item.Desc </div>
                                                 <div class="slider-btn">
                                                     <a class="slider-link-btn"
-                                                        href="#"> Shop Collection </a>
+                                                        href="@item.BtnUrl"> @item.BtnText </a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="slider-item-wrapper">
-                                            <div class="slider-item">
-                                                <img class="slick-slider-img" alt="Alt"
-                                                    src="~/./assets/images/products/IMG_3915.JPG" />
-                                                <div class="slider-header"> Casual Look </div>
-                                                <div class="slider-desc">
-                                                    Artıq UCard-la dünyanın istənilən yanacaqdoldurma, kafe-restoran
-                                                    və
-                                                    marketlərində 5% keşbek qazanmaq üçün 200 AZN dövriyyə tələbi
-                                                    yoxdur! </div>
-                                                <div class="slider-btn">
-                                                    <a class="slider-link-btn"
-                                                        href="#"> Shop Collection </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slider-item-wrapper">
-                                            <div class="slider-item">
-                                                <img class="slick-slider-img" alt="Alt"
-                                                    src="~/./assets/images/products/2023-07-23 20-55-08 (11).jpeg" />
-                                                <div class="slider-header"> Simple & Elegant </div>
-                                                <div class="slider-desc">
-                                                    Artıq UCard-la dünyanın istənilən yanacaqdoldurma, kafe-restoran
-                                                    və
-                                                    marketlərində 5% keşbek qazanmaq üçün 200 AZN dövriyyə tələbi
-                                                    yoxdur! </div>
-                                                <div class="slider-btn">
-                                                    <a class="slider-link-btn"
-                                                        href="#"> Shop Collection </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="slider-item-wrapper">
-                                            <div class="slider-item">
-                                                <img class="slick-slider-img" alt="Alt"
-                                                    src="~/./assets/images/products/2023-07-23 21-00-31.jpeg" />
-                                                <div class="slider-header"> Ləğv olundu! </div>
-                                                <div class="slider-desc">
-                                                    Artıq UCard-la dünyanın istənilən yanacaqdoldurma, kafe-restoran
-                                                    və
-                                                    marketlərində 5% keşbek qazanmaq üçün 200 AZN dövriyyə tələbi
-                                                    yoxdur! </div>
-                                                <div class="slider-btn">
-                                                    <a class="slider-link-btn"
-                                                        href="#"> Ətraflı </a>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        }
                                     </div>
                                     <div class="arrows">
                                         <button class="fx-nav-left">
@@ -191,17 +143,17 @@
                                 <div class="container">
                                     <div class="adds">
                                         <div class="row">
-                                            @for (int i = 1; i <= Model.Banners.Count; i++)
+                                            @for (int i = 0; i < Model.Banners.Count; i++)
                                         {
                                             Banner bn = Model.Banners[i];
-                                            if(i % 2 != 0){
+                                            if(i % 2 == 0){
                                                 <div class="col-lg-4">
                                                     <div class="adds-inner">
                                                         <div class="adds-media">
                                                             <div class="adds-media-image">
                                                                 <a href="#">
                                                                     <img width="356" height="379"
-                                                                 src="~/assets/manage/banners/@bn.ImageName"
+                                                                 src="~/manage/uploads/banners/@bn.ImageName"
                                                                  class="attachment-full size-full" alt="a" />
                                                                 </a>
                                                             </div>
@@ -240,7 +192,7 @@
                                                             <div class="adds-media-image">
                                                                 <a href="#">
                                                                     <img width="356" height="456"
-                                                                 src="~/assets/manage/banners/@bn.ImageName"
+                                                                 src="~/manage/uploads/banners/@bn.ImageName"
                                                                  class="attachment-full size-full" alt="a" />
                                                                 </a>
                                                             </div>
@@ -343,7 +295,7 @@
                                     <div class="carousel-slider">
                                         @foreach (var item in Model.ImageCarousels)
                                     {
-                                        <img src="~/assets/manage/carousels/@item.ImageName" />
+                                        <img src="~/manage/uploads/carousels/@item.ImageName" />
                                         
                                     }
                                     </div>

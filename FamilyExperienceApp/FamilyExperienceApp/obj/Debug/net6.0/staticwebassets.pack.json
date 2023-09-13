@@ -1629,6 +1629,54 @@
       "PackagePath": "staticwebassets\\manage\\assets\\libs\\popper.js\\dist\\umd\\popper.min.js.map"
     },
     {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\banners\\496ba168-7fac-45f6-839c-26f473bd18c9IMG_3460.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\banners\\496ba168-7fac-45f6-839c-26f473bd18c9IMG_3460.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\banners\\94b68d97-edd4-4357-8cec-de14b5b91f66IMG_3453.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\banners\\94b68d97-edd4-4357-8cec-de14b5b91f66IMG_3453.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\banners\\94e5c8fc-07d7-4fe2-902a-65a106952a9aTIM_6534.jpg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\banners\\94e5c8fc-07d7-4fe2-902a-65a106952a9aTIM_6534.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\46d73fc7-8d33-4d12-8708-459bac086d492023-07-23 21-08-14 (1).jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\46d73fc7-8d33-4d12-8708-459bac086d492023-07-23 21-08-14 (1).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\7e8da352-c4e9-48ae-86b1-a4f9406ec61cIMG_0704.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\7e8da352-c4e9-48ae-86b1-a4f9406ec61cIMG_0704.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\90daad05-0434-4e54-b548-e92c5c7c8bb5IMG_3207.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\90daad05-0434-4e54-b548-e92c5c7c8bb5IMG_3207.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\90fb7619-3c1c-43fb-bec8-c6348f55eb1dIMG_3176.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\90fb7619-3c1c-43fb-bec8-c6348f55eb1dIMG_3176.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\b10abf24-7ab1-4c8f-88a1-ebba4d1b26962023-07-23 20-47-32 (16).jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\b10abf24-7ab1-4c8f-88a1-ebba4d1b26962023-07-23 20-47-32 (16).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\f4249a6e-c2d9-41bf-bd63-f4c60f6efad42023-07-23 19-31-06 (11).jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\f4249a6e-c2d9-41bf-bd63-f4c60f6efad42023-07-23 19-31-06 (11).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\carousels\\fe175fb9-af7e-4027-a292-5cc7acad3b042023-07-23 20-55-08.jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\carousels\\fe175fb9-af7e-4027-a292-5cc7acad3b042023-07-23 20-55-08.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\genders\\738fb688-7136-471a-9857-f5b914f3f01bIMG_9188.jpg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\genders\\738fb688-7136-471a-9857-f5b914f3f01bIMG_9188.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\genders\\913af44d-885a-46fe-adae-4ffa6224e045IMG_8736.jpg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\genders\\913af44d-885a-46fe-adae-4ffa6224e045IMG_8736.jpg"
+    },
+    {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\products\\0b184d9a-7cb8-4b9a-96d0-9b1c1c3fdc49IMG_0796.JPG",
       "PackagePath": "staticwebassets\\manage\\uploads\\products\\0b184d9a-7cb8-4b9a-96d0-9b1c1c3fdc49IMG_0796.JPG"
     },
@@ -1703,6 +1751,22 @@
     {
       "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\products\\f9d26cd1-0b0f-402e-a99a-3f8bac5131cbIMG_3453.JPG",
       "PackagePath": "staticwebassets\\manage\\uploads\\products\\f9d26cd1-0b0f-402e-a99a-3f8bac5131cbIMG_3453.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\sliders\\24817ce6-6710-4d8c-9f7b-841e442dc5102023-06-11 17-15-59 (8).jpeg",
+      "PackagePath": "staticwebassets\\manage\\uploads\\sliders\\24817ce6-6710-4d8c-9f7b-841e442dc5102023-06-11 17-15-59 (8).jpeg"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\sliders\\370bebfd-5f55-4fa9-a67d-991f00b2d899IMG_3900.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\sliders\\370bebfd-5f55-4fa9-a67d-991f00b2d899IMG_3900.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\sliders\\6f5cb047-e2ee-4512-8829-46359755f30dIMG_3182.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\sliders\\6f5cb047-e2ee-4512-8829-46359755f30dIMG_3182.JPG"
+    },
+    {
+      "Id": "C:\\Users\\User Widnows 10 Home\\Desktop\\Final\\FamilyExperienceApp\\FamilyExperienceApp\\wwwroot\\manage\\uploads\\sliders\\f185b9b0-492c-48a4-afcd-8ba312594c0cIMG_3868.JPG",
+      "PackagePath": "staticwebassets\\manage\\uploads\\sliders\\f185b9b0-492c-48a4-afcd-8ba312594c0cIMG_3868.JPG"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FamilyExperienceApp.Microsoft.AspNetCore.StaticWebAssets.props",

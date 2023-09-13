@@ -28,10 +28,11 @@ namespace FamilyExperienceApp.Controllers
 
         
         [HttpPost]
-        public IActionResult AddToBasket(int id, int sizeId)
+        public ActionResult AddToBasket(int id, int sizeId)
         {
 
             BasketVM basketVM = new BasketVM();
+            var dataCount = 0;
 
             if (User.Identity.IsAuthenticated)
             {
@@ -56,26 +57,10 @@ namespace FamilyExperienceApp.Controllers
                 {
                     basketItem.Count++;
                 }
-
                 _context.SaveChanges();
 
-                //var items = _context.BasketItems
-                //    .Include(x => x.Product)
-                //    .ThenInclude(x => x.ProductImages.Where(x => x.PosterStatus == true))
-                //    .Include(x=>x.Size)
-                //    .Where(x => x.AppUserId == userId).ToList();
-
-                //foreach (var bi in items)
-                //{
-                //    BasketItemVM item = new BasketItemVM
-                //    {
-                //        Count = bi.Count,
-                //        Product = bi.Product,
-                //        Size = bi.Size,
-                //    };
-                //    basketVM.Items.Add(item);
-                //    basketVM.TotalAmount += (item.Product.DiscountedPrice > 0 ? item.Product.DiscountedPrice : item.Product.SalePrice) * item.Count;
-                //}
+                
+                dataCount = _context.BasketItems.Count();
             }
             else
             {
@@ -108,23 +93,12 @@ namespace FamilyExperienceApp.Controllers
                     cookieItem.Count++;
 
                 HttpContext.Response.Cookies.Append("basket", JsonConvert.SerializeObject(cookieItems));
+                dataCount = basketStr.Count();
 
-
-                //foreach (var ci in cookieItems)
-                //{
-                //    BasketItemVM item = new BasketItemVM
-                //    {
-                //        Count = ci.Count,
-                //        Product = _context.Products.Include(x => x.ProductImages.Where(x => x.PosterStatus == true))
-                //        .FirstOrDefault(x => x.Id == ci.ProductId),
-                //        Size = _context.Sizes.FirstOrDefault(x=>x.Id== ci.SizeId),
-                //    };
-                //    basketVM.Items.Add(item);
-                //    basketVM.TotalAmount += (item.Product.DiscountedPrice > 0 ? item.Product.DiscountedPrice : item.Product.SalePrice) * item.Count;
-                //}
+                
             }
-
             return Content("Okey");
+            //return Json(new { data = dataCount});
         }
 
 
@@ -177,42 +151,10 @@ namespace FamilyExperienceApp.Controllers
                 }
             }
             
-            //return PartialView("_BasketPartial", basketVM);
             return RedirectToAction("index", "wishlist");
         }
 
-        //[Authorize(Roles = "Member")]
-        //public IActionResult RemoveFromWishlist(int id)
-        //{
-        //    WishlistVM wishlistVM = new WishlistVM();
-
-        //    var userId = User.Identity.IsAuthenticated ? User.FindFirstValue(ClaimTypes.NameIdentifier) : null;
-        //    if (userId != null)
-        //    {
-        //        var wishlistItem = _context.WishlistItems.FirstOrDefault(x => x.ProductId == id && x.AppUserId == userId);
-        //        if (wishlistItem == null) return View("Error");
-        //        else
-        //        {
-        //            _context.WishlistItems.Remove(wishlistItem);
-        //            _context.SaveChanges();
-        //        }
-
-        //        var items = _context.WishlistItems.Include(x => x.Product).ThenInclude(x => x.ProductImages.Where(x => x.PosterStatus == true)).Where(x => x.AppUserId == userId).ToList();
-
-        //        foreach (var wi in items)
-        //        {
-        //            WishlistItemVM item = new WishlistItemVM
-        //            {
-        //                Count = wi.Count,
-        //                Product = wi.Product,
-        //            };
-        //            wishlistVM.Items.Add(item);
-        //        }
-
-        //    }
-
-        //    return RedirectToAction("index", "wishlist");
-        //}
+        
 
         public IActionResult Detail(int id)
         {

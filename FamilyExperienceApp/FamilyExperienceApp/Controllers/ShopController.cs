@@ -15,10 +15,12 @@ namespace FamilyExperienceApp.Controllers
         {
             _context = context;
         }
-        public IActionResult Index(int? categoryId = null, List<int> colorId = null, decimal? minPrice = null, decimal? maxPrice = null, string sort = "A_to_Z", string season = "All", string gender = "All")
+        public IActionResult Index(string search = null, int ? categoryId = null, List<int> colorId = null, decimal? minPrice = null, decimal? maxPrice = null, string sort = "A_to_Z", string season = "All", string gender = "All")
         {
             var query = _context.Products.Include(x => x.ProductImages.Where(x => x.PosterStatus == true)).Include(x => x.Color)
                 .Include(x => x.Category).AsQueryable();
+
+            if (search != null) query = query.Where(x => x.Name.Contains(search));
 
             ShopVM vm = new ShopVM();
             vm.MinPrice = query.Min(x => x.DiscountedPrice>0?x.DiscountedPrice:x.SalePrice);
