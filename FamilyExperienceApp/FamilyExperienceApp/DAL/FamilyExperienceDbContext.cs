@@ -27,6 +27,8 @@ namespace FamilyExperienceApp.DAL
         public DbSet<ProductReview> ProductReviews { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<EmailAddress> EmailAddresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

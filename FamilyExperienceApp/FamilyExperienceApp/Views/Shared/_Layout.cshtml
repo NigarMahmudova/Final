@@ -1,7 +1,9 @@
-﻿@inject LayoutService _layoutService
+﻿@using FamilyExperienceApp.Helpers;
+@inject LayoutService _layoutService
 @{
     var basket = _layoutService.GetBasket();
     var wishlist = _layoutService.GetWishlist();
+    var settings = _layoutService.GetSettings();
 }
 
 <!DOCTYPE html>
@@ -16,6 +18,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
@@ -34,23 +37,23 @@
     <header id="fx-page-header">
         <div id="fx-page-header-inner" class="">
             <a class="fx-header-logo-link fx-height--set fx-source--image" asp-controller="home" asp-action="index" rel="home">
-                <img width="100" height="100" src="~/./assets/images/fx_logo-removebg.png"
+                <img width="100" height="100" src="~/./assets/images/@settings["Logo"]"
                     class="fx-header-logo-image fx--main" alt="logo main" />
 
             </a>
             <nav class="fx-header-navigation" aria-label="Top Menu">
                 <ul id="main-menu-1" class="menu">
                     <li class="menu-item menu-item-type-custom menu-item-object-custom">
-                        <a asp-controller="home" asp-action="index"><span class="qodef-menu-item-text">Home</span></a>
+                        <a asp-controller="home" asp-action="index"><span class="qodef-menu-item-text @Html.ActiveClass("Home","Index")">Home</span></a>
                     </li>
                     <li
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37 qodef--hide-link qodef-menu-item--wide">
-                        <a asp-controller="shop" asp-action="index"><span class="qodef-menu-item-text">Shop</span></a>
+                        <a asp-controller="shop" asp-action="index"><span class="qodef-menu-item-text @Html.ActiveClass("Shop","Index")">Shop</span></a>
 
                     </li>
                     <li
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39 qodef--hide-link qodef-menu-item--narrow">
-                        <a asp-controller="contact" asp-action="index"><span class="qodef-menu-item-text">Contact Us</span></a>
+                        <a asp-controller="contact" asp-action="index"><span class="qodef-menu-item-text @Html.ActiveClass("Contact","Index")">Contact Us</span></a>
                     </li>
                 </ul>
             </nav>
@@ -277,22 +280,18 @@
     <!-- Header section end -->
 
     <!-- Mobile header start -->
-    <header id="qodef-page-mobile-header" class="d-none">
-        <div id="qodef-page-mobile-header-inner" class="">
-            <a itemprop="url" class="qodef-mobile-header-logo-link qodef-height--set qodef-source--image"
-                href="index.html">
-                <img width="147" height="30" src="" class="qodef-header-logo-image qodef--main" alt="logo main" /></a>
-            <div class="qodef-widget-holder qodef--one">
-                <div id="corsen_core_woo_dropdown_cart-7"
-                    class="widget widget_corsen_core_woo_dropdown_cart qodef-mobile-header-widget-area-one"
-                    data-area="mobile-header">
-                    <div class="qodef-widget-dropdown-cart-outer">
-                        <div class="qodef-widget-dropdown-cart-inner">
-                            <a class="qodef-m-opener" href="cart/index.html">
-                                <span class="qodef-m-opener-text">Cart</span>
-                                <span class="qodef-m-opener-icon"><svg class="qodef-svg--cart"
-                                        xmlns="http://www.w3.org/2000/svg" width="12.578" height="15.5"
-                                        viewBox="0 0 12.578 15.5">
+    <header id="fx-page-mobile-header">
+        <div id="fx-page-mobile-header-inner" class="">
+            <a itemprop="url" class="fx-mobile-header-logo-link" href="#">
+                <img width="147" height="55" src="~/./assets/images/fx_logo-removebg.png" class="fx-header-logo-image qodef--main" alt="logo main" /></a>
+            <div class="fx-widget-holder">
+                <div id="fx-mobile-dropdown-cart" class="fx-mobile-dropdown-cart widget" data-area="mobile-header">
+                    <div class="fx-dropdown-cart-outer">
+                        <div class="fx-dropdown-cart-inner">
+                            <a class="fx-opener" href="#">
+                                <span class="fx-opener-text">Cart</span>
+                                <span class="fx-opener-icon"><svg class="qodef-svg-cart"
+                                        xmlns="http://www.w3.org/2000/svg" width="12.578" height="15.5" viewBox="0 0 12.578 15.5">
                                         <g fill="none">
                                             <path
                                                 d="M8.95835778 4.13258219H3.36799794V3.474442c0-1.64011002 1.25390998-2.97443998 2.79518-2.97443998 1.54126978 0 2.79517984 1.33432996 2.79517984 2.97443998v.65814018Z" />
@@ -302,38 +301,33 @@
                                         </g>
                                         <path d="M.5 15V3.625h11.578V15Z" fill="none" stroke="currentColor" />
                                     </svg></span>
-                                <span class="qodef-m-opener-count">0</span>
+                                <span class="fx-opener-count">0</span>
                             </a>
-                            <div class="qodef-widget-dropdown-cart-content">
-                                <p class="qodef-m-posts-not-found">No products in the cart.</p>
-                            </div>
+                            <a href="#" class="fx-opener-icon fx-mobile-header-opener">
+                                <span class="fx-m-icon fx--open">
+                                    <i class="fa-solid fa-bars"></i>
+                                </span>
+                                <span class="fx-m-icon fx--close">
+                                <svg class="fx-svg--menu-close" xmlns="http://www.w3.org/2000/svg" width="12.735" height="12.734" viewBox="0 0 12.735 12.734"><g transform="translate(-10846.042 9588.293)"><path d="M10846.4-9587.939l12.027,12.026" transform="translate(-0.001)" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M0,0,12.027,12.027" transform="translate(10858.423 -9587.939) rotate(90)" fill="none" stroke="currentColor" stroke-width="1"></path></g></svg> </span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="qodef-mobile-header-navigation" role="navigation" aria-label="Mobile Menu">
+        <nav class="fx-mobile-header-navigation fx--close" role="navigation" aria-label="Mobile Menu">
             <ul id="menu-main-menu-4" class="">
                 <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-35 qodef--hide-link qodef-menu-item--narrow">
-                    <a href="#" onclick="JavaScript: return false;"><span class="qodef-menu-item-text">Home</span></a>
+                    class="menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="#"><span class="fx-menu-item-text">Home</span></a>
                 </li>
                 <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-36 qodef--hide-link qodef-menu-item--narrow">
-                    <a href="#" onclick="JavaScript: return false;"><span class="qodef-menu-item-text">Pages</span></a>
+                    class="menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="#"><span class="fx-menu-item-text">Shop</span></a>
                 </li>
                 <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37 qodef--hide-link qodef-menu-item--wide">
-                    <a href="#" onclick="JavaScript: return false;"><span class="qodef-menu-item-text">Shop</span></a>
-                </li>
-                <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38 qodef--hide-link qodef-menu-item--narrow">
-                    <a href="#" onclick="JavaScript: return false;"><span
-                            class="qodef-menu-item-text">Portfolio</span></a>
-                </li>
-                <li
-                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39 qodef--hide-link qodef-menu-item--narrow">
-                    <a href="#" onclick="JavaScript: return false;"><span class="qodef-menu-item-text">Blog</span></a>
+                    class="menu-item menu-item-type-custom menu-item-object-custom">
+                    <a href="#"><span class="fx-menu-item-text">Contact Us</span></a>
                 </li>
             </ul>
         </nav>
@@ -355,7 +349,7 @@
                                 data-area="fx-footer-top-area-column-1">
                                 <div class="fx-m-image">
                                     <a itemprop="url" href="index.html" target="_self">
-                                        <img itemprop="image" src="~/./assets/images/fx_logo-removebg.png" width="100"
+                                        <img itemprop="image" src="~/./assets/images/@settings["Logo"]" width="100"
                                             height="100" alt="" />
                                     </a>
                                 </div>

@@ -5,6 +5,11 @@
     <link rel="stylesheet" href="~/./assets/css/carousel.css" />
 }
 
+@inject LayoutService _layoutService
+@{
+    var settings = _layoutService.GetSettings();
+}
+
 <!-- Main section start -->
     <div id="fx-page-outer">
         <div id="fx-home-page-inner" class="fx-content-full-width">
@@ -281,7 +286,7 @@
                                                 Instagram </h4>
                                             <p class="fx-m-text" style="margin-top: 9px">
                                                 Follow us on
-                                                <a href="#">@@qodeinteractive</a>
+                                                <a href="#">@settings["Instagram"]</a>
                                             </p>
                                         </div>
                                     </div>
@@ -306,7 +311,7 @@
                             <!-- Features section start -->
                             <section>
                                 <div class="features">
-                                    <div class="col-lg-3 elementor-widget-container">
+                                    <div class="col-lg-3 col-12 elementor-widget-container">
                                         <div class="features-item">
                                             <div class="fx-m-icon-wrapper">
                                                 <span class="fx-icon-holder">
@@ -329,7 +334,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 elementor-widget-container">
+                                    <div class="col-lg-3 col-12 elementor-widget-container">
                                         <div class="features-item">
                                             <div class="fx-m-icon-wrapper">
                                                 <span class="fx-icon-holder">
@@ -354,7 +359,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 elementor-widget-container">
+                                    <div class="col-lg-3 col-12 elementor-widget-container">
                                         <div class="features-item">
                                             <div class="fx-m-icon-wrapper">
                                                 <span class="fx-icon-holder">
@@ -374,7 +379,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3 elementor-widget-container">
+                                    <div class="col-lg-3 col-12 elementor-widget-container">
                                         <div class="features-item">
                                             <div class="fx-m-icon-wrapper">
                                                 <span class="fx-icon-holder">

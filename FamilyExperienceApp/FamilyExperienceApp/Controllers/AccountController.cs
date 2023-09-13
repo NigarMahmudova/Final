@@ -56,14 +56,14 @@ namespace FamilyExperienceApp.Controllers
 
             await _userManager.AddToRoleAsync(user, "Member");
 
-            var code = new Random().Next(1000,9999);
-            user.MailConfirmCode=code;
-            await _mailService.SendEmailAsync(new MailRequest()
-            {
-                ToEmail= memberVM.Email,    
-                Subject= "Mail Confirmation",
-                Body=$"<h1>Salam hormetli istifadeci,<h1/><p>{code}<p/>"
-            });
+            //var code = new Random().Next(1000,9999);
+            //user.MailConfirmCode=code;
+            //await _mailService.SendEmailAsync(new MailRequest()
+            //{
+            //    ToEmail= memberVM.Email,    
+            //    Subject= "Mail Confirmation",
+            //    Body=$"<h1>Salam hormetli istifadeci,<h1/><p>{code}<p/>"
+            //});
             return RedirectToAction("Login");
         }
 
